@@ -16,14 +16,14 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('live/assets/img/favicons/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('live/assets/img/logorsudam1.png') }}">
     <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('live/assets/img/favicons/favicon-32x32.png') }}">
+        href="{{ asset('live/assets/img/logorsudam1.png') }}">
     <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('live/assets/img/favicons/favicon-16x16.png') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('live/assets/img/favicons/favicon.ico') }}">
+        href="{{ asset('live/assets/img/logorsudam1.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('live/assets/img/logorsudam1.png') }}">
     <link rel="manifest" href="{{ asset('live/assets/img/favicons/manifest.json') }}">
-    <meta name="msapplication-TileImage" content="{{ asset('live/assets/img/favicons/mstile-150x150.png') }}">
+    <meta name="msapplication-TileImage" content="{{ asset('live/assets/img/logorsudam1.png') }}">
     <meta name="theme-color" content="#ffffff">
 
 
@@ -54,7 +54,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse border-top border-lg-0 mt-2 mt-lg-0" id="navbarSupportedContent">
                 </div>
             </div>
         </nav>
@@ -69,42 +69,6 @@
             <div class="bg-holder opacity-25"
                 style="background-image: url('{{ asset('live/assets/img/gallery/dot-bg.png') }}');background-position:top left;margin-top:-3.125rem;background-size:auto;">
             </div>
-            <!--/.bg-holder-->
-
-            <div class="container">
-                <div class="row py-8">
-                    <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none"
-                            href="#"><img src="{{ asset('assets/img/gallery/footer-logo.png') }}" height="51"
-                                alt="" /></a>
-                        <p class="text-light my-4">The world's most trusted <br />telehealth company.</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
-                        <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif">Departments</h5>
-                        <ul class="list-unstyled mb-md-4 mb-lg-0">
-                            <li class="lh-lg"><a class="footer-link" href="#!">Eye care</a></li>
-                            <li class="lh-lg"><a class="footer-link" href="#!">Cardiac are</a></li>
-                            <li class="lh-lg"><a class="footer-link" href="#!">Heart care</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-                        <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">Membership</h5>
-                        <ul class="list-unstyled mb-md-4 mb-lg-0">
-                            <li class="lh-lg"><a class="footer-link" href="#!">Free trial</a></li>
-                            <li class="lh-lg"><a class="footer-link" href="#!">Silver</a></li>
-                            <li class="lh-lg"><a class="footer-link" href="#!">Premium</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-                        <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif"> Customer Care</h5>
-                        <ul class="list-unstyled mb-md-4 mb-lg-0">
-                            <li class="lh-lg"><a class="footer-link" href="#!">About Us</a></li>
-                            <li class="lh-lg"><a class="footer-link" href="#!">Contact US</a></li>
-                            <li class="lh-lg"><a class="footer-link" href="#!">Get Update</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
 
             <!-- ============================================-->
             <!-- <section> begin ============================-->
@@ -113,7 +77,7 @@
                 <div class="container">
                     <div class="row justify-content-md-between justify-content-evenly py-4">
                         <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-                            <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; Your Company, 2021
+                            <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; RS Abdoel Moeloek, 2025
                             </p>
                         </div>
                         <div class="col-12 col-sm-8 col-md-6">
@@ -123,8 +87,8 @@
                                     <path
                                         d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
                                     </path>
-                                </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="https://themewagon.com/"
-                                    target="_blank">ThemeWagon </a>
+                                </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="#"
+                                    target="_blank">SIMRSUDAM </a>
                             </p>
                         </div>
                     </div>
