@@ -1,53 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <style>
-        <style>.menu-button {
-            min-height: 120px;
-            /* tinggi minimum agar tombol tidak mengecil */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .menu-button i {
-            font-size: 2rem;
-            /* Ukuran ikon */
-            margin-bottom: 0.5rem;
-        }
-
-        .menu-label {
-            font-size: 1rem;
-            /* Ukuran teks tetap terbaca */
-            font-weight: 500;
-            line-height: 1.2;
-            display: block;
-        }
-
-        /* Opsional: Jika layar sangat kecil */
-        @media (max-width: 375px) {
-            .menu-button {
-                min-height: 100px;
-            }
-
-            .menu-button i {
-                font-size: 1.5rem;
-            }
-
-            .menu-label {
-                font-size: 0.85rem;
-            }
-        }
-    </style>
-
-    </style>
 
     <section class="py-5 position-relative" style="min-height: 100vh;">
         {{-- Language Switcher --}}
 
-        <div class="container text-center mt-1">
+        <div class="container text-center">
             <div class="position-absolute end-0 m-3 mt-3 mt-lg-3 " style="top: 0.95 rem;">
                 <div class="dropdown">
                     <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="langDropdown"
@@ -73,13 +31,13 @@
             <div class="mb-2">
                 <img src="{{ asset('live/assets/img/logorsudam1.png') }}" alt="Logo RS" class="img-fluid mb-3"
                     style="max-width: 90px;">
-                <h1 class="fw-bold">RS Abdoel Moeloek</h1>
+                <h1 class="fw-bold">RS Abdul Moeloek</h1>
             </div>
 
             <div class="row g-3">
                 <div class="col-6 col-md-3">
                     <a href="#" class="menu-button btn btn-primary btn-lg w-100 py-4 text-white text-center">
-                        <i class="fas fa-hospital fa-2x mb-2 d-block"></i>
+                        <i class="fas fa-hospital fa-2x mb-2 d-block "></i>
                         <span class="menu-label">Profil RSUDAM</span>
                     </a>
                 </div>
@@ -90,7 +48,7 @@
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-info btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route('dokterspesialis') }}" class="menu-button btn btn-info btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-user-md fa-2x mb-2 d-block"></i>
                         <span class="menu-label">Dokter Spesialis </span>
                     </a>

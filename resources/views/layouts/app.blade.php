@@ -17,10 +17,8 @@
     <!--    Favicons-->
     <!-- ===============================================-->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('live/assets/img/logorsudam1.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('live/assets/img/logorsudam1.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('live/assets/img/logorsudam1.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('live/assets/img/logorsudam1.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('live/assets/img/logorsudam1.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('live/assets/img/logorsudam1.png') }}">
     <link rel="manifest" href="{{ asset('live/assets/img/favicons/manifest.json') }}">
     <meta name="msapplication-TileImage" content="{{ asset('live/assets/img/logorsudam1.png') }}">
@@ -42,19 +40,21 @@
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3"
                     href="index.html">
-                    <img src="{{ asset('live/assets/img/rsudam.png') }}" width="100" alt="logo">
+                    <img src="{{ asset('live/assets/img/rsudam.png') }}" width="150" alt="logo">
                     <div class="text-center text-lg-start">
-                        <h5 class="mb-0 fw-bold" style="color: #2C3E50; font-size: 0.95 rem;">
-                            Sahabat masyarakat menuju Lampung sehat
-                        </h5>
+
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse border-top border-lg-0 mt-2 mt-lg-0" id="navbarSupportedContent">
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
+                    </span></button>
+                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                    <div class="navbar-nav pt-2 pt-lg-0 font-base text-center">
+                        <h4 class=" fw-bold" style="color: #2C3E50; font-size: 0.95 rem;">
+                            Sahabat masyarakat menuju Lampung sehat
+                        </h4>
+                    </div>
                 </div>
             </div>
         </nav>
