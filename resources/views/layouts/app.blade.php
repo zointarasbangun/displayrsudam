@@ -47,15 +47,27 @@
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
-                    </span></button>
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-                    <div class="navbar-nav pt-2 pt-lg-0 font-base text-center">
-                        <h4 class=" fw-bold" style="color: #2C3E50; font-size: 0.95 rem;">
-                            Sahabat masyarakat menuju Lampung sehat
-                        </h4>
+                    <div class="d-flex w-100 align-items-center">
+                        <!-- Tagline di kiri -->
+                        <div class="me-auto pt-2 pt-lg-0 font-base">
+                            <h4 class="fw-bold mb-0" style="color: #2C3E50; font-size: 1 rem;">
+                                Sahabat masyarakat menuju Lampung sehat
+                            </h4>
+                        </div>
+
+                        <!-- Tombol login di kanan -->
+                        <div class="btn btn-sm btn-primary rounded ms-auto" href="{{ route('login') }}">
+                            Log in
+                        </div>
                     </div>
                 </div>
+
+
             </div>
         </nav>
 
