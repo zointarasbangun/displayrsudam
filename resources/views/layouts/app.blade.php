@@ -39,7 +39,7 @@
             data-navbar-on-scroll="data-navbar-on-scroll">
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3"
-                    href="index.html">
+                    href="#">
                     <img src="{{ asset('live/assets/img/rsudam.png') }}" width="150" alt="logo">
                     <div class="text-center text-lg-start">
 
@@ -64,6 +64,13 @@
             style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
 
             @yield('content')
+
+        </section>
+        <section class="py-5 d-flex align-items-start justify-content-center bg-secondary"
+            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/bg-eye-care.png') }}'); background-size: cover; background-position: top center;">
+
+            @yield('visi')
+
         </section>
         <section class="py-0 bg-secondary">
             <div class="bg-holder opacity-25"
