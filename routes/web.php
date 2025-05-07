@@ -9,4 +9,8 @@ use App\http\Controllers\DashboardController;
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
+
 Route::get('/dokterspesialis', [DashboardController::class, 'dokterspesialis'])->name('dokterspesialis');
+
+
+Route::get('/testimoni', [App\Http\Controllers\TestimoniController::class, 'index']);

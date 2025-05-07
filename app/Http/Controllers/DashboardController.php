@@ -15,4 +15,9 @@ class DashboardController extends Controller
     {
         return view('dashboard.dokterspesialis');
     }
+
+    public function testimoni()
+    {
+        return view('dashboard.testimoni');
+    }
 }
