@@ -11,18 +11,44 @@ class DashboardController extends Controller
         return view('dashboard.index');
     }
 
+    public function profilrsudam()
+    {
+        return view('dashboard.profilrsudam');
+    }
+
+    public function layananunggulan()
+    {
+        return view('dashboard.layananunggulan');
+    }
+
     public function dokterspesialis()
     {
         return view('dashboard.dokterspesialis');
     }
 
-    public function profilrsudam()
+    public function fasilitasrsudam()
     {
-        return view('dashboard.profilrsudam');
+        return view('dashboard.fasilitasrsudam');
+    }
+
+    public function pendaftaranonline()
+    {
+        return view('dashboard.pendaftaranonline');
     }
 
     public function infodarurat()
     {
         return view('dashboard.infodarurat');
     }
+
+    public function testimonipasien()
+    {
+        return view('dashboard.testimonipasien');
+    }
+    
+    public function petakontak()
+    {
+        return view('dashboard.petakontak');
+    }
+
 }

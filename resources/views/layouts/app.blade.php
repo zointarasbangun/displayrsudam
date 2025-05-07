@@ -38,6 +38,12 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
             data-navbar-on-scroll="data-navbar-on-scroll">
             <div class="container d-flex justify-content-between align-items-center">
+                {{-- Tombol Back --}}
+                @if (!in_array(Route::currentRouteName(), ['dashboard']))
+                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary navbar-toggler d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                @endif
                 <a class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3"
                     href="#">
                     <img src="{{ asset('live/assets/img/rsudam.png') }}" width="150" alt="logo">

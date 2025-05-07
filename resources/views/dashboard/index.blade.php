@@ -42,7 +42,7 @@
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-success btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route ('layananunggulan') }}" class="menu-button btn btn-success btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-star fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Layanan Unggulan </span>
                     </a>
@@ -54,13 +54,13 @@
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-warning btn-lg w-100 py-4 text-center">
+                    <a href="{{ route ('fasilitasrsudam') }}" class="menu-button btn btn-warning btn-lg w-100 py-4 text-center">
                         <i class="fas fa-clinic-medical fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Fasilitas RSUDAM</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-secondary btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route ('pendaftaranonline') }}" class="menu-button btn btn-secondary btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-clipboard-list fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Pendaftaran Online</span>
                     </a>
@@ -72,13 +72,13 @@
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-dark btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route ('testimonipasien') }}" class="menu-button btn btn-dark btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-comments fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Testimoni Pasien</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-outline-dark btn-lg w-100 py-4  text-center">
+                    <a href="{{ route ('petakontak') }}" class="menu-button btn btn-outline-dark btn-lg w-100 py-4  text-center">
                         <i class="fas fa-map-marker-alt fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Peta Kontak</span>
                     </a>
