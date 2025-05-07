@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class InfoDaruratController extends Controller
 {
     public function index()
     {
@@ -19,10 +19,5 @@ class DashboardController extends Controller
     public function profilrsudam()
     {
         return view('dashboard.profilrsudam');
-    }
-
-    public function infodarurat()
-    {
-        return view('dashboard.infodarurat');
     }
 }

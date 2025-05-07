@@ -66,7 +66,7 @@
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-danger btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route('infodarurat') }}" class="menu-button btn btn-danger btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-phone-volume fa-2x mb-2 d-block"></i>
                         <span class="menu-label">Info Darurat </span>
                     </a>

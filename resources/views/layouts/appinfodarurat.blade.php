@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>DisplayRSUDAM </title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('live/assets/img/logorsudam1.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('live/assets/img/logorsudam1.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('live/assets/img/logorsudam1.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('live/assets/img/logorsudam1.png') }}">
+    <link rel="manifest" href="{{ asset('live/assets/img/favicons/manifest.json') }}">
+    <meta name="msapplication-TileImage" content="{{ asset('live/assets/img/logorsudam1.png') }}">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="{{ asset('live/assets/css/theme.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main class="main" id="top">
+        <!-- Tagline on the left (visible on large screens) -->
+        <div class="me-auto pt-2 pt-lg-0 d-none d-lg-block">
+            <h4 class="fw-bold mb-0" style="color: #2C3E50; font-size: 1rem;">
+                Sahabat masyarakat menuju Lampung sehat
+            </h4>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand d-flex flex-column flex-lg-row align-items-center gap-3" href="#">
+                    <img src="{{ asset('live/assets/img/rsudam.png') }}" width="150" alt="logo">
+                    <div class="text-center text-lg-start">
+                        <!-- Optional tagline or text here -->
+                    </div>
+                </a>
+
+                <!-- Navbar Toggle Button for Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <!-- Tagline on the left (visible on large screens) -->
+                        <div class="me-auto pt-2 pt-lg-0 d-none d-lg-block">
+                            <h4 class="fw-bold mb-0" style="color: #2C3E50; font-size: 1rem;">
+                                Sahabat masyarakat menuju Lampung sehat
+                            </h4>
+                        </div>
+
+                        <!-- Navbar items on the right -->
+                        <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                            <li class="nav-item px-2"><a class="nav-link" href="#kontakugd">Kontak UGD</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#prosedurugd">Prosedur Darurat</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#petaugd">Peta UGD</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="py-5 d-flex align-items-start justify-content-center"
+            style="min-height: 10vh; height: auto; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
+
+            @yield('kontak')
+
+        </section>
+        <section class="py-5 d-flex align-items-start justify-content-center bg-info"
+            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/bg-eye-care.png') }}'); background-size: cover; background-position: top center;">
+
+            @yield('prosedur')
+
+        </section>
+        <section class="py-5 d-flex align-items-start justify-content-center py-0 bg-secondary"
+            style="background-position:top left;margin-top:-3.125rem;background-size:auto;">
+
+            @yield('peta')
+        </section>
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-0 bg-primary">
+
+            <div class="container">
+                <div class="row justify-content-md-between justify-content-evenly py-4">
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+                        <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; RS Abdoel Moeloek, 2025
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-8 col-md-6">
+                        <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;
+                            <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="#F95C19" viewBox="0 0 16 16">
+                                <path
+                                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
+                                </path>
+                            </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="#" target="_blank">SIMRSUDAM </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+        </section>
+
+    </main>
+
+    <script src="{{ asset('live/vendors/@popperjs/popper.min.js') }}"></script>
+    <script src="{{ asset('live/vendors/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('live/vendors/is/is.min.js') }}"></script>
+    <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="{{ asset('live/vendors/fontawesome/all.min.js') }}"></script>
+    <script src="{{ asset('live/assets/js/theme.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&amp;display=swap"
+        rel="stylesheet">
+</body>
+
+</html>

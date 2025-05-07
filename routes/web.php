@@ -15,3 +15,5 @@ Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/dokterspesialis', [DashboardController::class, 'dokterspesialis'])->name('dokterspesialis');
 
 Route::get('/profilrsudam', [DashboardController::class, 'profilrsudam'])->name('profilrsudam');
+
+Route::get('/infodarurat', [DashboardController::class, 'infodarurat'])->name('infodarurat');
