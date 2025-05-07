@@ -36,13 +36,13 @@
 
             <div class="row g-3">
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-primary btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route ('profilrsudam') }}" class="menu-button btn btn-primary btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-hospital fa-2x mb-2 d-block "></i>
                         <span class="menu-label">Profil RSUDAM</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-success btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route ('layananunggulan') }}" class="menu-button btn btn-success btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-star fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Layanan Unggulan </span>
                     </a>
@@ -54,19 +54,19 @@
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-warning btn-lg w-100 py-4 text-center">
+                    <a href="{{ route ('fasilitasrsudam') }}" class="menu-button btn btn-warning btn-lg w-100 py-4 text-center">
                         <i class="fas fa-clinic-medical fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Fasilitas RSUDAM</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-secondary btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route ('pendaftaranonline') }}" class="menu-button btn btn-secondary btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-clipboard-list fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Pendaftaran Online</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-danger btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route('infodarurat') }}" class="menu-button btn btn-danger btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-phone-volume fa-2x mb-2 d-block"></i>
                         <span class="menu-label">Info Darurat </span>
                     </a>
@@ -78,17 +78,17 @@
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="#" class="menu-button btn btn-outline-dark btn-lg w-100 py-4  text-center">
+                    <a href="{{ route ('petakontak') }}" class="menu-button btn btn-outline-dark btn-lg w-100 py-4  text-center">
                         <i class="fas fa-map-marker-alt fa-2x mb-2 d-block"></i>
-                        <span class="menu-label"> Peta & Kontak</span>
+                        <span class="menu-label"> Peta Kontak</span>
                     </a>
                 </div>
             </div>
 
             {{-- Marquee Teks Berjalan --}}
             <div class="mt-4">
-                <marquee behavior="scroll" direction="left" class="bg-danger text-white py-2 fw-bold rounded">
-                    Selamat datang di RSUD Dr. H. Abdoel Moeloek Provinsi Lampung — Kami siap melayani Anda dengan sepenuh
+                <marquee behavior="scrol+l" direction="left" class="bg-danger text-white py-2 fw-bold rounded">
+                    Selamat datang di RSUD Dr. H. Abdul Moeloek Provinsi Lampung — Kami siap melayani Anda dengan sepenuh
                     hati.
                 </marquee>
             </div>
@@ -97,3 +97,5 @@
         </div>
     </section>
 @endsection
+
+

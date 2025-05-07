@@ -1,0 +1,113 @@
+/*!
+ * =========================================================
+ * Login Form Bootstrap 1 - Modified
+ * =========================================================
+ */
+ html,
+ body {
+     height: 100%;
+ }
+
+ body {
+     font-family: "Poppins", sans-serif;
+     display: flex;
+     align-items: center;
+     background-image: url("/live/assets/img/gallery/hero-bg.png");
+     background-size: cover;
+     background-position: center;
+     color: #333;
+ }
+
+ a {
+     color: #005693;
+     text-decoration: none;
+     transition: all 0.3s ease;
+ }
+
+ a:hover {
+     color: #5a1118;
+ }
+
+ /* Form Container with Glass Effect */
+ .uf-form-signin {
+     width: 100%;
+     max-width: 400px;
+     padding: 30px;
+     margin: auto;
+     background: rgba(3, 76, 88, 0.619);
+     border-radius: 20px;
+     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+     backdrop-filter: blur(5px);
+ }
+
+ /* Input Group */
+ .uf-input-group .input-group-text {
+     background: #005693;
+     color: #f8f9fa;
+     border: none;
+     font-size: 18px;
+     padding: 15px;
+     width: 50px;
+     border-radius: 10px 0 0 10px;
+ }
+
+ .uf-input-group .form-control {
+     border: none;
+     font-size: 16px;
+     background: #ffffff;
+     border-radius: 0 10px 10px 0;
+     transition: background 0.3s ease;
+ }
+
+ .uf-input-group .form-control:focus {
+     box-shadow: none;
+     background: #e0f3ff;
+ }
+
+ /* Primary Button */
+ .uf-btn-primary {
+     background: #005693;
+     color: #fff;
+     border: none;
+     padding: 12px;
+     font-weight: 600;
+     border-radius: 10px;
+     transition: all 0.3s ease;
+ }
+
+ .uf-btn-primary:hover {
+     background: #003f6e;
+     color: #fff;
+ }
+
+ /* Checkbox */
+ .uf-form-check-input:checked {
+     background-color: #005693;
+     border-color: #005693;
+ }
+
+ /* Social Icons */
+ .uf-social-login .uf-social-ic + .uf-social-ic {
+     margin-left: 15px;
+ }
+
+ .uf-social-ic {
+     width: 40px;
+     height: 40px;
+     background: #fff;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .uf-social-ic:hover {
+     background: #842029;
+     transform: scale(1.1);
+ }
+
+ .uf-social-ic:hover i {
+     color: #fff;
+ }
