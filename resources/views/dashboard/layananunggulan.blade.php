@@ -113,7 +113,7 @@
     <!--/.bg-holder-->
     <div class="container">
     <div class="row align-items-center">
-      <div class=" text-center mb-4" style="position: absolute; top: 5%; left: 50%; transform: translateX(-50%); z-index: 2;">
+      <div class=" text-center mb-4">
       <h1 class="text-center"> IGD 24 JAM</h1>
       </div>
       <div class="col-md-5 col-xxl-6"><img class="img-fluid rounded" src="{{asset('live/assets/img/igd1.png')}}" alt="..." />
