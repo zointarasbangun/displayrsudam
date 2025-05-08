@@ -35,16 +35,15 @@
 <body>
 
     <main class="main" id="top">
+
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
             data-navbar-on-scroll="data-navbar-on-scroll">
             <div class="container d-flex justify-content-between align-items-center">
                 {{-- Tombol Back --}}
                 @if (!in_array(Route::currentRouteName(), ['dashboard']))
-                    <a href="{{ url()->previous() }}"
-                        class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm"
-                        style="width: 36px; height: 36px;">
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
+                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm" style="width: 36px; height: 36px;">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
                 @endif
                 <a class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3"
                     href="#">
@@ -67,11 +66,12 @@
                                 Sahabat masyarakat menuju Lampung sehat
                             </h4>
                         </div>
+                        <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                            <li class="nav-item px-2"><a class="nav-link" href="#kontakugd">Kontak UGD</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#prosedurugd">Prosedur Darurat</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#petaugd">Peta UGD </a></li>
+                        </ul>
 
-                        <!-- Tombol login di kanan -->
-                        <a class="btn btn-sm btn-primary rounded ms-auto" href="{{ route('login') }}">
-                            Log in
-                        </a>
                     </div>
                 </div>
 
@@ -79,25 +79,25 @@
             </div>
         </nav>
 
-
         <section class="py-5 d-flex align-items-start justify-content-center"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
+            style="min-height: 10vh; height: auto; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
 
-            @yield('content')
+            @yield('kontak')
 
         </section>
-
         <section class="py-5 d-flex align-items-start justify-content-center bg-info"
             style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/bg-eye-care.png') }}'); background-size: cover; background-position: top center;">
 
-            
+            @yield('prosedur')
+
         </section>
-<!--         
-        <section class="bg-secondary">
-        <div class="bg-holder" style="background-image:url{{  asset ('live/assets/img/gallery/bg-eye-care.png')}};background-position:center;background-size:contain;"></div>
+        <section class="py-5 d-flex align-items-start justify-content-center py-0 bg-secondary"
+            style="background-position:top left;margin-top:-3.125rem;background-size:auto;">
 
-        </section> -->
-
+            @yield('peta')
+        </section>
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
         <section class="py-0 bg-primary">
 
             <div class="container">
@@ -121,7 +121,14 @@
             <!-- end of .container-->
 
         </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+        </section>
+
     </main>
+
     <script src="{{ asset('live/vendors/@popperjs/popper.min.js') }}"></script>
     <script src="{{ asset('live/vendors/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('live/vendors/is/is.min.js') }}"></script>

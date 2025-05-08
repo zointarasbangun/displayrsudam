@@ -67,11 +67,6 @@
                                 Sahabat masyarakat menuju Lampung sehat
                             </h4>
                         </div>
-
-                        <!-- Tombol login di kanan -->
-                        <a class="btn btn-sm btn-primary rounded ms-auto" href="{{ route('login') }}">
-                            Log in
-                        </a>
                     </div>
                 </div>
 
@@ -88,11 +83,12 @@
         </section>
 
         <section class="py-5 d-flex align-items-start justify-content-center bg-info"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/bg-eye-care.png') }}'); background-size: cover; background-position: top center;">
+            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
 
-            
+            @yield(section: 'igd24')
+
         </section>
-<!--         
+        <!--         
         <section class="bg-secondary">
         <div class="bg-holder" style="background-image:url{{  asset ('live/assets/img/gallery/bg-eye-care.png')}};background-position:center;background-size:contain;"></div>
 
