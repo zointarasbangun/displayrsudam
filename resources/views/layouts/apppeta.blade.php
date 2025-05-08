@@ -35,7 +35,6 @@
 <body>
 
     <main class="main" id="top">
-
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
             data-navbar-on-scroll="data-navbar-on-scroll">
             <div class="container d-flex justify-content-between align-items-center">
@@ -63,72 +62,70 @@
                         <!-- Tagline di kiri -->
                         <div class="me-auto pt-2 pt-lg-0 font-base">
                             <h4 class="fw-bold mb-0" style="color: #2C3E50; font-size: 1 rem;">
-                                Sahabat masyarakat menuju Lampung sehat
+                                Fasilitas RSUDAM
                             </h4>
                         </div>
+                        <!-- Content hamburger menu -->
                         <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                            <li class="nav-item px-2"><a class="nav-link" href="#kontakugd">Kontak UGD</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#prosedurugd">Prosedur Darurat</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#petaugd">Peta UGD </a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#denah">Denah</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#kontak">Hubungi Kami</a></li>
                         </ul>
-
                     </div>
                 </div>
-
-
             </div>
         </nav>
 
+
         <section class="py-5 d-flex align-items-start justify-content-center"
-            style="min-height: 10vh; height: auto; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
+            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
+
+            @yield('denah')
+
+        </section>
+        <section class="py-5 d-flex align-items-start justify-content-center bg-secondary"
+            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/people-bg-1.png') }}'); background-size: cover; background-position: top center;">
 
             @yield('kontak')
 
         </section>
-        <section class="py-5 d-flex align-items-start justify-content-center bg-info"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/bg-eye-care.png') }}'); background-size: cover; background-position: top center;">
+        <section class="py-0 bg-secondary">
+            <div class="bg-holder opacity-25"
+                style="background-image: url('{{ asset('live/assets/img/gallery/dot-bg.png') }}');background-position:top left;margin-top:-3.125rem;background-size:auto;">
+            </div>
 
-            @yield('prosedur')
+            <!-- ============================================-->
+            <!-- <section> begin ============================-->
+            <section class="py-0 bg-primary">
 
-        </section>
-        <section class="py-5 d-flex align-items-start justify-content-center py-0 bg-secondary"
-            style="background-position:top left;margin-top:-3.125rem;background-size:auto;">
-
-            @yield('peta')
-        </section>
-        <!-- ============================================-->
-        <!-- <section> begin ============================-->
-        <section class="py-0 bg-primary">
-
-            <div class="container">
-                <div class="row justify-content-md-between justify-content-evenly py-4">
-                    <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-                        <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; RS Abdoel Moeloek, 2025
-                        </p>
-                    </div>
-                    <div class="col-12 col-sm-8 col-md-6">
-                        <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;
-                            <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                fill="#F95C19" viewBox="0 0 16 16">
-                                <path
-                                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
-                                </path>
-                            </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="#" target="_blank">SIMRSUDAM </a>
-                        </p>
+                <div class="container">
+                    <div class="row justify-content-md-between justify-content-evenly py-4">
+                        <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+                            <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; RS Abdoel Moeloek, 2025
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-6">
+                            <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;
+                                <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="#F95C19" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
+                                    </path>
+                                </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="#"
+                                    target="_blank">SIMRSUDAM </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- end of .container-->
+                <!-- end of .container-->
 
-        </section>
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
+            </section>
+            <!-- <section> close ============================-->
+            <!-- ============================================-->
 
 
         </section>
 
     </main>
-
     <script src="{{ asset('live/vendors/@popperjs/popper.min.js') }}"></script>
     <script src="{{ asset('live/vendors/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('live/vendors/is/is.min.js') }}"></script>

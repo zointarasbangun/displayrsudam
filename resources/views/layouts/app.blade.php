@@ -84,12 +84,7 @@
             @yield('content')
 
         </section>
-        <section class="py-5 d-flex align-items-start justify-content-center bg-secondary"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/bg-eye-care.png') }}'); background-size: cover; background-position: top center;">
 
-            @yield('visi')
-
-        </section>
         <section class="py-0 bg-secondary">
             <div class="bg-holder opacity-25"
                 style="background-image: url('{{ asset('live/assets/img/gallery/dot-bg.png') }}');background-position:top left;margin-top:-3.125rem;background-size:auto;">

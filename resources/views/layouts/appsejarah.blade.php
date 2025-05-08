@@ -112,7 +112,7 @@
             @yield('virtual')
 
         </section>
-
+        
         <!-- ============================================-->
         <!-- <section> begin ============================-->
         <section class="py-0 bg-primary">
