@@ -69,9 +69,9 @@
                         </div>
 
                         <!-- Tombol login di kanan -->
-                        <div class="btn btn-sm btn-primary rounded ms-auto" href="{{ route('login') }}">
+                        <a class="btn btn-sm btn-primary rounded ms-auto" href="{{ route('login') }}">
                             Log in
-                        </div>
+                        </a>
                     </div>
                 </div>
 
