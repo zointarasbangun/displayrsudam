@@ -88,6 +88,14 @@
             @yield(section: 'igd24')
 
         </section>
+
+        <section class="py-5 d-flex align-items-start justify-content-center bg-info"
+            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
+
+            @yield(section: 'labrad')
+
+        </section>
+
         <!--         
         <section class="bg-secondary">
         <div class="bg-holder" style="background-image:url{{  asset ('live/assets/img/gallery/bg-eye-care.png')}};background-position:center;background-size:contain;"></div>

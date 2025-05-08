@@ -109,25 +109,50 @@
   <section class="bg-secondary">
     <div class="bg-holder"
     style="background-image:url(assets/img/gallery/bg-eye-care.png);background-position:center;background-size:contain;">
+    <div class="mt-4">
+      <h1 class="text-center text-white"> IGD 24 JAM</h1>
+    </div>
+
     </div>
     <!--/.bg-holder-->
     <div class="container">
     <div class="row align-items-center">
-      <div class=" text-center mb-4" style="position: absolute; top: 5%; left: 50%; transform: translateX(-50%); z-index: 2;">
-      <h1 class="text-center"> IGD 24 JAM</h1>
+      <div class=" text-center mb-4"
+      style="position: absolute; top: 5%; left: 50%; transform: translateX(-50%); z-index: 2;">
       </div>
-      <div class="col-md-5 col-xxl-6"><img class="img-fluid rounded" src="{{asset('live/assets/img/igd1.png')}}" alt="..." />
+      <div class="row align-items-center justify-content-center">
+      <!-- Gambar 1 -->
+      <div class="col-md-6 text-center mb-3">
+        <img class="img-fluid rounded w-100" style="height: 300px; object-fit: cover;"
+        src="{{asset('live/assets/img/igd1.png')}}" alt="Gedung IGD RSUDAM" />
       </div>
-      <div class="col-md-7 col-xxl-6 text-center text-md-start">
-      <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Eye Care with Top Professionals<br
-        class="d-none d-sm-block" />and In Budget.</h2>
-      <p class="text-light">We've built a healthcare system that puts your needs first.<br
-        class="d-none d-sm-block" />For us, there is nothing more important than the health of <br
-        class="d-none d-sm-block" />you and your loved ones. </p>
-      <div class="py-3"><a class="btn btn-lg btn-light rounded-pill" href="#!" role="button">Learn more </a></div>
+
+      <!-- Gambar 2 -->
+      <div class="col-md-6 text-center mb-3">
+        <img class="img-fluid rounded w-100" style="height: 300px; object-fit: cover;"
+        src="{{asset('live/assets/img/igd2.png')}}" alt="Ruang IGD Zona 1" />
+      </div>
+      </div>
+      <div class="text-center text-light my-3">
+      <p class="fw-bold mb-2">Layanan Instalasi Gawat Darurat (IGD) RSUDAM Provinsi Lampung
+        dilayani Dokter Spesialis on-site setiap Hari Pukul 17.00-06.00 WB terdiri dari:<br< /p>
+        <p>
+          dr. Spesial Penyakit Dalam<br />
+          dr. Spesialis Bedah<br />
+          dr. Spesialis Kandungan
+        </p>
       </div>
     </div>
     </div>
   </section>
+
+@endsection
+
+@section(section: 'labrad')
+  <!-- Laboratorium & Radiologi Modern -->
+  <div class="mt-4">
+    <h1 class="text-center"> LABORATORIUM DAN RADIOLOGI MODERN</h1>
+  </div>
+
 
 @endsection
