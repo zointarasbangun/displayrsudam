@@ -40,7 +40,7 @@
             <div class="container d-flex justify-content-between align-items-center">
                 {{-- Tombol Back --}}
                 @if (!in_array(Route::currentRouteName(), ['dashboard']))
-                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm" style="width: 36px; height: 36px;">
+                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary navbar-toggler d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
                     <i class="fas fa-arrow-left"></i>
                 </a>
                 @endif
@@ -62,27 +62,21 @@
                         <!-- Tagline di kiri -->
                         <div class="me-auto pt-2 pt-lg-0 font-base">
                             <h4 class="fw-bold mb-0" style="color:rgb(37, 44, 107); font-size: 1 rem;">
-                                Sahabat masyarakat menuju Lampung sehat
+                                Fasilitas RSUDAM
                             </h4>
                         </div>
                         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
                             id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#profil">Profil</a></li>
-                                <li class="nav-item px-2"><a class="nav-link" href="#sejarah">Sejarah</a></li>
-                                <li class="nav-item px-2"><a class="nav-link" href="#visi-misi">Visi dan Misi</a></li>
-                                <li class="nav-item px-2"><a class="nav-link" href="#virtual-tour">Virtual Tour </a></li>
+                                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#profil">Fasilitas Disabilitas</a></li>
+                                <li class="nav-item px-2"><a class="nav-link" href="#sejarah">Galeri</a></li>
                             
-                        </div>
-
-                       
+                        </div>                   
                     </div>
                 </div>
 
-
             </div>
         </nav>
-
 
         <section class="py-5 d-flex align-items-start justify-content-center"
             style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">

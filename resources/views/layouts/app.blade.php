@@ -40,7 +40,7 @@
             <div class="container d-flex justify-content-between align-items-center">
                 {{-- Tombol Back --}}
                 @if (!in_array(Route::currentRouteName(), ['dashboard']))
-                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary navbar-toggler d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
+                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm" style="width: 36px; height: 36px;">
                     <i class="fas fa-arrow-left"></i>
                 </a>
                 @endif

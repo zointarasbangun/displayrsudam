@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appfasilitas')
 
 @section('content')
     <section class="py-5 position-relative" style="min-height: 100vh;">
