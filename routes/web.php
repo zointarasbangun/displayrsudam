@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestimoniController;
 use App\http\Controllers\DashboardController;
 
 // Route::get('/', function () {
@@ -24,6 +25,8 @@ Route::get('/pendaftaranonline', [DashboardController::class, 'pendaftaranonline
 
 Route::get('/infodarurat', [DashboardController::class, 'infodarurat'])->name('infodarurat');
 
-Route::get('/testimonipasien', [DashboardController::class, 'testimonipasien'])->name('testimonipasien');
+Route::get('/testimoni', [TestimoniController::class, 'index'])->name('testimoni');
 
 Route::get('/petakontak', [DashboardController::class, 'petakontak'])->name('petakontak');
+
+Route::get('/infodarurat', [DashboardController::class, 'infodarurat'])->name('infodarurat');

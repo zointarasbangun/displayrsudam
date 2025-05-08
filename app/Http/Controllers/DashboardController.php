@@ -41,13 +41,14 @@ class DashboardController extends Controller
         return view('dashboard.infodarurat');
     }
 
-    public function testimonipasien()
+    public function testimoni()
     {
-        return view('dashboard.testimonipasien');
+        return view('dashboard.testimoni');
     }
     
     public function petakontak()
     {
         return view('dashboard.petakontak');
     }
+
 }

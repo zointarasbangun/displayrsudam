@@ -41,9 +41,11 @@
             <div class="container d-flex justify-content-between align-items-center">
                 {{-- Tombol Back --}}
                 @if (!in_array(Route::currentRouteName(), ['dashboard']))
-                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm" style="width: 36px; height: 36px;">
-                    <i class="fas fa-arrow-left"></i>
-                </a>
+                    <a href="{{ url()->previous() }}"
+                        class="btn btn-outline-secondary navbar-toggler d-flex align-items-center justify-content-center me-3"
+                        style="width: 48px; height: 48px;">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 @endif
                 <a class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3"
                     href="#">
@@ -67,12 +69,9 @@
                             </h4>
                         </div>
                         <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                            <li class="nav-item px-2"><a class="nav-link" href="#profil">Profil</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#sejarah">Sejarah</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#visi-misi">Visi dan Misi</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#penghargaan">Penghargaan </a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#virtual-tour">Virtual Tour </a></li>
-
+                            <li class="nav-item px-2"><a class="nav-link" href="#kontakugd">Kontak UGD</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#prosedurugd">Prosedur Darurat</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#petaugd">Peta UGD </a></li>
                         </ul>
 
                     </div>
@@ -83,36 +82,22 @@
         </nav>
 
         <section class="py-5 d-flex align-items-start justify-content-center"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
+            style="min-height: 10vh; height: auto; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
 
-            @yield('content')
-
-        </section>
-        <section class="py-5 d-flex align-items-start justify-content-center bg-secondary"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/bg-eye-care.png') }}'); background-position:center;background-size:contain;">
-
-            @yield('sejarah')
+            @yield('kontak')
 
         </section>
-        <section class="py-5 d-flex align-items-start justify-content-center"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
+        <section class="py-5 d-flex align-items-start justify-content-center bg-info"
+            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/bg-eye-care.png') }}'); background-size: cover; background-position: top center;">
 
-            @yield('visi')
-
-        </section>
-        <section class="py-5 d-flex align-items-start justify-content-center"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/people.png') }}'); background-position:top center;background-size:contain;">
-
-            @yield('penghargaan')
+            @yield('prosedur')
 
         </section>
-        <section class="py-5 d-flex align-items-start justify-content-center"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
+        <section class="py-5 d-flex align-items-start justify-content-center py-0 bg-secondary"
+            style="background-position:top left;margin-top:-3.125rem;background-size:auto;">
 
-            @yield('virtual')
-
+            @yield('peta')
         </section>
-
         <!-- ============================================-->
         <!-- <section> begin ============================-->
         <section class="py-0 bg-primary">
