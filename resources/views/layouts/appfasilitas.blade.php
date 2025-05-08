@@ -40,7 +40,7 @@
             <div class="container d-flex justify-content-between align-items-center">
                 {{-- Tombol Back --}}
                 @if (!in_array(Route::currentRouteName(), ['dashboard']))
-                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary navbar-toggler d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
+                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm" style="width: 36px; height: 36px;">
                     <i class="fas fa-arrow-left"></i>
                 </a>
                 @endif
@@ -61,54 +61,32 @@
                     <div class="d-flex w-100 align-items-center">
                         <!-- Tagline di kiri -->
                         <div class="me-auto pt-2 pt-lg-0 font-base">
-                            <h4 class="fw-bold mb-0" style="color:rgb(37, 44, 107); font-size: 1 rem;">
+                            <h4 class="fw-bold mb-0" style="color: #2C3E50; font-size: 1 rem;">
                                 Fasilitas RSUDAM
                             </h4>
                         </div>
-                        <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
-                            id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#profil">Fasilitas Disabilitas</a></li>
-                                <li class="nav-item px-2"><a class="nav-link" href="#sejarah">Galeri</a></li>
-                            
-                        </div>                   
+                        <!-- Content hamburger menu -->
+                        <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                            <li class="nav-item px-2"><a class="nav-link" href="#disabilitas">Fasilitas Disabilitas</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#galeri">Galeri</a></li>
+                        </ul>
                     </div>
                 </div>
-
             </div>
         </nav>
 
         <section class="py-5 d-flex align-items-start justify-content-center"
             style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
 
-            @yield('content')
+            @yield('disabilitas')
 
         </section>
         <section class="py-5 d-flex align-items-start justify-content-center bg-secondary"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/bg-eye-care.png') }}'); background-size: cover; background-position: top center;">
+            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/people-bg-1.png') }}'); background-size: cover; background-position: top center;">
 
-            @yield('sejarah')
-
-        </section>
-        <section class="py-5 d-flex align-items-start justify-content-center"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
-
-            @yield('visi')
+            @yield('galeri')
 
         </section>
-        <section class="py-5 d-flex align-items-start justify-content-center"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/people.png') }}'); background-position:top center;background-size:contain;">
-
-            @yield('penghargaan')
-
-        </section>
-        <section class="py-5 d-flex align-items-start justify-content-center"
-            style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
-
-            @yield('virtual')
-
-        </section>
-
         <section class="py-0 bg-secondary">
             <div class="bg-holder opacity-25"
                 style="background-image: url('{{ asset('live/assets/img/gallery/dot-bg.png') }}');background-position:top left;margin-top:-3.125rem;background-size:auto;">
@@ -131,7 +109,8 @@
                                     <path
                                         d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
                                     </path>
-                                </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="#" target="_blank">SIMRSUDAM </a>
+                                </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="#"
+                                    target="_blank">SIMRSUDAM </a>
                             </p>
                         </div>
                     </div>
@@ -146,6 +125,7 @@
         </section>
 
     </main>
+    
     <script src="{{ asset('live/vendors/@popperjs/popper.min.js') }}"></script>
     <script src="{{ asset('live/vendors/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('live/vendors/is/is.min.js') }}"></script>
