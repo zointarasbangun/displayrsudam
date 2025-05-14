@@ -38,6 +38,8 @@ Route::get('/petakontak', [DashboardController::class, 'petakontak'])->name('pet
 
 Route::get('/infodarurat', [DashboardController::class, 'infodarurat'])->name('infodarurat');
 
+Route::get('/dokter', [DokterController::class, 'dokter']);
+
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['superadmin']], function () {
         Route::get('/runningtext', [MarqueeController::class, 'runningtext'])->name('runningtext.index');
