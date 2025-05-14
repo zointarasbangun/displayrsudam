@@ -4,6 +4,7 @@ use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestimoniController;
 use App\http\Controllers\DashboardController;
+use App\Http\Controllers\DokterController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -34,6 +35,8 @@ Route::get('/testimoni', [TestimoniController::class, 'index'])->name('testimoni
 Route::get('/petakontak', [DashboardController::class, 'petakontak'])->name('petakontak');
 
 Route::get('/infodarurat', [DashboardController::class, 'infodarurat'])->name('infodarurat');
+
+Route::get('/dokter', [DokterController::class, 'dokter']);
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['superadmin']], function () {

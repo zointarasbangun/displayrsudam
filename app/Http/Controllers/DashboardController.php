@@ -23,7 +23,8 @@ class DashboardController extends Controller
 
     public function dokterspesialis()
     {
-        return view('dashboard.dokterspesialis');
+        // $dokters = Dokter::all();
+        return view('dashboard.dokter');
     }
 
     public function fasilitasrsudam()
@@ -45,7 +46,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.testimoni');
     }
-    
+
     public function petakontak()
     {
         return view('dashboard.petakontak');
