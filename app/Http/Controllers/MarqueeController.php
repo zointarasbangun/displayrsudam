@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\RunningText;
+use Hash;
 use Illuminate\Http\Request;
+use Session;
 
 class MarqueeController extends Controller
 {
@@ -25,23 +27,27 @@ class MarqueeController extends Controller
         return redirect()->route('runningtext.index')->with('message', 'Teks berhasil ditambahkan');
     }
 
-    public function update(Request $request, RunningText $runningtext)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'text' => 'required|string|max:255',
-            'status' => 'required|boolean'
+        $validatedData = $request->validate([
+            'text' => 'nullable',
+            'status' => 'nullable',
         ]);
 
-        $runningtext->update($request->all());
+        $runningtext = RunningText::findOrFail($id);
 
-        return redirect()->route('runningtext.index')->with('message', 'Teks berhasil diperbarui');
+        $runningtext->update($validatedData);
+
+        $runningtext->save();
+
+        return redirect()->route('runningtext.index')->with('success', 'Teks berhasil diperbarui');
     }
 
     public function destroy(string $id)
     {
         $runningtext = RunningText::findOrFail($id);
         $runningtext->delete();
-        
-        return redirect()->route('runningtext.index')->with('message', 'Teks berhasil dihapus');
+
+        return redirect()->route('runningtext.index')->with('success', 'Teks berhasil dihapus');
     }
 }

@@ -54,7 +54,7 @@
                     </li>
 
                     <li id="menu-l" class="nav-item">
-                        <a href="{{ route('runningtext') }}" class="nav-link">
+                        <a href="{{ route('runningtext.index') }}" class="nav-link">
                             <i class="iconify nav-icon" data-icon="line-md:edit"></i>
                             <p>Running Text</p>
                         </a>

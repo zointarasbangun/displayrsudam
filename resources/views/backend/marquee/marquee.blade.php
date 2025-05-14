@@ -70,66 +70,21 @@
                                 </div>
                             </div>
                         </div>
-                        @foreach ($texts as $text)
-                            <div class="modal fade" id="modal-update{{ $text->id }}" tabindex="-1" role="dialog"
-                                aria-labelledby="editRunningTextModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content" style="color:black; background:#ffffff; padding:10px;">
-                                        <div class="modal-header text-start">
-                                            <h5 class="modal-title w-100 font-weight-bold">Edit Running Text</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                                                style="color: red;">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
 
-                                        <form method="POST" action="{{ route('runningtext.update',  ['id' => $text->id]) }}">
-                                            @csrf
-                                            <input type="hidden" name="id" id="editRunningTextId">
-                                            {{-- Hidden ID untuk update --}}
-                                            <div class="modal-body mx-3">
-
-                                                <div class="mb-2">
-                                                    <i class="mr-3 fa-solid fa-pen"></i>
-                                                    <label for="text">Isi Running Text</label>
-                                                    <input type="text" name="text" id="editRunningTextContent"
-                                                        class="form-control validate" value="{{ $text->text }}"
-                                                        style="color:black;" required>
-                                                </div>
-
-                                                <div class="mb-2">
-                                                    <i class="mr-3 fa-solid fa-toggle-on"></i>
-                                                    <label for="status">Status</label>
-                                                    <select name="status" id="editRunningTextStatus"
-                                                        class="form-control validate" style="color:black;">
-                                                        <option value="1">Aktif</option>
-                                                        <option value="0">Tidak Aktif</option>
-                                                    </select>
-                                                </div>
-
-                                            </div>
-                                            <div class="modal-footer d-flex justify-content-center">
-                                                <button type="submit" class="btn btn-primary">Update</button>
-                                            </div>
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="card-body table-responsive p-0" style="max-height: 600px; overflow-y: auto;">
-                                <table id="example2" class="table table-striped text-center">
-                                    <thead>
+                        <div class="card-body table-responsive p-0" style="max-height: 600px; overflow-y: auto;">
+                            <table id="example2" class="table table-striped text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Teks</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($texts as $index => $text)
                                         <tr>
-                                            <th>Teks</th>
-                                            <th>Status</th>
-                                            <th>Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                        <tr>
+                                            <td>{{ $index + 1 }}</td>
                                             <td>{{ $text->text }}</td>
                                             <td>
                                                 @if ($text->status)
@@ -140,13 +95,64 @@
                                             </td>
                                             <td>
                                                 <a data-toggle="modal" data-target="#modal-update{{ $text->id }}"
-                                                    class="btn btn-warning btn-sm">Edit</a>
+                                                    class="btn btn-warning"> <i class="fas fa-pen"></i> Edit</a>
                                                 <a data-toggle="modal" data-target="#modal-hapus{{ $text->id }}"
-                                                    class="btn btn-outline-danger">
+                                                    class="btn btn-danger">
                                                     <i class="fas fa-trash-alt"></i> Hapus
                                                 </a>
                                             </td>
                                         </tr>
+
+                                        <div class="modal fade" id="modal-update{{ $text->id }}" tabindex="-1"
+                                            role="dialog" aria-labelledby="editRunningTextModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content"
+                                                    style="color:black; background:#ffffff; padding:10px;">
+                                                    <div class="modal-header text-start">
+                                                        <h5 class="modal-title w-100 font-weight-bold">Edit Running Text
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close" style="color: red;">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+
+                                                    <form method="POST"
+                                                        action="{{ route('runningtext.update', ['id' => $text->id]) }}">
+                                                        @csrf
+                                                        <input type="hidden" name="id" id="editRunningTextId">
+                                                        {{-- Hidden ID untuk update --}}
+                                                        <div class="modal-body mx-3">
+
+                                                            <div class="mb-2">
+                                                                <i class="mr-3 fa-solid fa-pen"></i>
+                                                                <label for="text">Isi Running Text</label>
+                                                                <input type="text" name="text"
+                                                                    id="editRunningTextContent"
+                                                                    class="form-control validate"
+                                                                    value="{{ $text->text }}" style="color:black;"
+                                                                    required>
+                                                            </div>
+
+                                                            <div class="mb-2">
+                                                                <i class="mr-3 fa-solid fa-toggle-on"></i>
+                                                                <label for="status">Status</label>
+                                                                <select name="status" id="editRunningTextStatus"
+                                                                    class="form-control validate" style="color:black;">
+                                                                    <option value="1">Aktif</option>
+                                                                    <option value="0">Tidak Aktif</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="modal-footer d-flex justify-content-center">
+                                                            <button type="submit" class="btn btn-primary">Update</button>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <div class="modal fade" id="modal-hapus{{ $text->id }}">
                                             <div class="modal-dialog">
@@ -183,13 +189,13 @@
                                             </div>
                                             <!-- /.modal-dialog -->
                                         </div>
-                        @endforeach
-                        </tbody>
-                        </table>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection
