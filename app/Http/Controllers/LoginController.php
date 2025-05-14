@@ -65,4 +65,10 @@ class LoginController extends Controller
 
         return redirect()->route('login'); // Jika tidak terautentikasi, redirect ke halaman login
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login')->with('succes', ' anda berhasil logout');
+    }
 }

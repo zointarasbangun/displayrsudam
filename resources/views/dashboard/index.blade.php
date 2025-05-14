@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <section class="py-5 position-relative" style="min-height: 100vh;">
         {{-- Language Switcher --}}
 
@@ -36,49 +35,57 @@
 
             <div class="row g-3">
                 <div class="col-6 col-md-3">
-                    <a href="{{ route ('profilrsudam') }}" class="menu-button btn btn-primary btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route('profilrsudam') }}"
+                        class="menu-button btn btn-primary btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-hospital fa-2x mb-2 d-block "></i>
                         <span class="menu-label">Profil RSUDAM</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="{{ route ('layananunggulan') }}" class="menu-button btn btn-success btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route('layananunggulan') }}"
+                        class="menu-button btn btn-success btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-star fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Layanan Unggulan </span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="{{ route('dokterspesialis') }}" class="menu-button btn btn-info btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route('dokterspesialis') }}"
+                        class="menu-button btn btn-info btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-user-md fa-2x mb-2 d-block"></i>
                         <span class="menu-label">Dokter Spesialis </span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="{{ route ('fasilitasrsudam') }}" class="menu-button btn btn-warning btn-lg w-100 py-4 text-center">
+                    <a href="{{ route('fasilitasrsudam') }}"
+                        class="menu-button btn btn-warning btn-lg w-100 py-4 text-center">
                         <i class="fas fa-clinic-medical fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Fasilitas RSUDAM</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="{{ route ('pendaftaranonline') }}" class="menu-button btn btn-secondary btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route('pendaftaranonline') }}"
+                        class="menu-button btn btn-secondary btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-clipboard-list fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Pendaftaran Online</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="{{ route('infodarurat') }}" class="menu-button btn btn-danger btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route('infodarurat') }}"
+                        class="menu-button btn btn-danger btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-phone-volume fa-2x mb-2 d-block"></i>
                         <span class="menu-label">Info Darurat </span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="{{ route('testimoni') }}" class="menu-button btn btn-dark btn-lg w-100 py-4 text-white text-center">
+                    <a href="{{ route('testimoni') }}"
+                        class="menu-button btn btn-dark btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-comments fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Testimoni Pasien</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="{{ route ('petakontak') }}" class="menu-button btn btn-outline-dark btn-lg w-100 py-4  text-center">
+                    <a href="{{ route('petakontak') }}"
+                        class="menu-button btn btn-outline-dark btn-lg w-100 py-4  text-center">
                         <i class="fas fa-map-marker-alt fa-2x mb-2 d-block"></i>
                         <span class="menu-label"> Peta Kontak</span>
                     </a>
@@ -87,15 +94,18 @@
 
             {{-- Marquee Teks Berjalan --}}
             <div class="mt-4">
-                <marquee behavior="scrol+l" direction="left" class="bg-danger text-white py-2 fw-bold rounded">
-                    Selamat datang di RSUD Dr. H. Abdul Moeloek Provinsi Lampung — Kami siap melayani Anda dengan sepenuh
-                    hati.
-                </marquee>
+                <div class="bg-primary text-white py-2 px-3 rounded shadow" style="overflow: hidden;">
+                    <marquee behavior="scroll" direction="left" scrollamount="6"
+                        style="font-weight: bold; font-size: 1.1rem;">
+                        @foreach ($texts as $text)
+                            {{ $text }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        @endforeach
+                    </marquee>
+                </div>
+
             </div>
 
 
         </div>
     </section>
 @endsection
-
-

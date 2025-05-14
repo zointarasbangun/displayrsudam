@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\RunningText;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard.index');
+        $texts = RunningText::where('status', true)->pluck('text');
+        return view('dashboard.index', compact('texts'));
     }
+
 
     public function profilrsudam()
     {
@@ -45,7 +48,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.testimoni');
     }
-    
+
     public function petakontak()
     {
         return view('dashboard.petakontak');

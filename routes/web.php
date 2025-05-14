@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestimoniController;
 use App\http\Controllers\DashboardController;
+use App\http\Controllers\MarqueeController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -14,6 +16,7 @@ Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login-proses', [LoginController::class, 'login_proses'])->name('login-proses');
 Route::get('/dashboard', [LoginController::class, 'dashboard'])->name('dashboard');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
@@ -37,7 +40,15 @@ Route::get('/infodarurat', [DashboardController::class, 'infodarurat'])->name('i
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['superadmin']], function () {
-        
+        Route::get('/runningtext', [MarqueeController::class, 'runningtext'])->name('runningtext.index');
+        Route::post('/runningtext/store', [MarqueeController::class, 'store'])->name('runningtext.store');
+        Route::post('/runningtext/update{id}', [MarqueeController::class, 'update'])->name('runningtext.update');
+        Route::delete('/runningtext/delete{id}', [MarqueeController::class, 'destroy'])->name('runningtext.delete');
+
+
+        Route::get('/account', [AccountController::class, 'kelolaakun'])->name('kelolaakun');
+
+
     });
 
     Route::group(['middleware' => ['admin']], function () {
