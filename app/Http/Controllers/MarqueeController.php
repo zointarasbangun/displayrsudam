@@ -15,39 +15,39 @@ class MarqueeController extends Controller
         return view('backend.marquee.marquee', compact('texts'));
     }
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'text' => 'required|string|max:255',
-            'status' => 'required|boolean'
-        ]);
+                public function store(Request $request)
+            {
+                $request->validate([
+                    'text' => 'required|string|max:255',
+                    'status' => 'required|boolean'
+                ]);
 
-        RunningText::create($request->all());
+                RunningText::create($request->all());
 
-        return redirect()->route('runningtext.index')->with('message', 'Teks berhasil ditambahkan');
-    }
+                return redirect()->route(auth()->user()->role . '.runningtext.index')
+                                ->with('message', 'Teks berhasil ditambahkan');
+            }
 
-    public function update(Request $request, $id)
-    {
-        $validatedData = $request->validate([
-            'text' => 'nullable',
-            'status' => 'nullable',
-        ]);
+            public function update(Request $request, $id)
+            {
+                $validatedData = $request->validate([
+                    'text' => 'nullable',
+                    'status' => 'nullable',
+                ]);
 
-        $runningtext = RunningText::findOrFail($id);
+                $runningtext = RunningText::findOrFail($id);
+                $runningtext->update($validatedData);
 
-        $runningtext->update($validatedData);
+                return redirect()->route(auth()->user()->role . '.runningtext.index')
+                                ->with('success', 'Teks berhasil diperbarui');
+            }
 
-        $runningtext->save();
+            public function destroy(string $id)
+            {
+                $runningtext = RunningText::findOrFail($id);
+                $runningtext->delete();
 
-        return redirect()->route('runningtext.index')->with('success', 'Teks berhasil diperbarui');
-    }
-
-    public function destroy(string $id)
-    {
-        $runningtext = RunningText::findOrFail($id);
-        $runningtext->delete();
-
-        return redirect()->route('runningtext.index')->with('success', 'Teks berhasil dihapus');
-    }
+                return redirect()->route(auth()->user()->role . '.runningtext.index')
+                                ->with('success', 'Teks berhasil dihapus');
+            }
 }
