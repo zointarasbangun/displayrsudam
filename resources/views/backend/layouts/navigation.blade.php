@@ -83,7 +83,7 @@
                         </li>
 
                         <li id="menu-klien" class="nav-item">
-                            <a href="{{ route('kelolaakun') }}" class="nav-link">
+                            <a href="{{ route('superadmin.kelolaakun') }}" class="nav-link">
                                 <i class="iconify nav-icon ml-1" data-icon="line-md:account-add"></i>
                                 <p>Master Akun</p>
                             </a>
@@ -118,7 +118,7 @@
                         </li>
 
                         <li id="menu-l" class="nav-item">
-                            <a href="{{ route('runningtext.index') }}" class="nav-link">
+                            <a href="{{ route('superadmin.runningtext.index') }}" class="nav-link">
                                 <i class="iconify nav-icon" data-icon="line-md:edit"></i>
                                 <p>Running Text</p>
                             </a>

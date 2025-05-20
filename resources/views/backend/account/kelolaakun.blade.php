@@ -38,7 +38,7 @@
                                         </button>
                                     </div>
 
-                                    <form method="POST" id="penggunaForm" action="{{ route('pengguna.store') }}">
+                                    <form method="POST" id="penggunaForm" action="{{ route('superadmin.pengguna.store') }}">
                                         @csrf
                                         <input type="hidden" name="id" id="penggunaId"> {{-- Untuk mode edit --}}
                                         <div class="modal-body mx-3">
@@ -157,7 +157,7 @@
                                                 </div>
 
                                                 <form method="POST"
-                                                    action="{{ route('pengguna.update', ['id' => $d->id]) }}"
+                                                    action="{{ route('superadmin.pengguna.update', ['id' => $d->id]) }}"
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="modal-body mx-3">
@@ -237,7 +237,7 @@
                                                 </p>
                                             </div>
                                             <div class="modal-footer justify-content-between">
-                                                <form action="{{ route('pengguna.delete', ['id' => $d->id]) }}"
+                                                <form action="{{ route('superadmin.pengguna.delete', ['id' => $d->id]) }}"
                                                     method="POST">
                                                     @csrf
                                                     @method('DELETE')

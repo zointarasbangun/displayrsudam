@@ -66,7 +66,7 @@
             {{-- Tombol Back --}}
             @if (!in_array(Route::currentRouteName(), ['dashboard']))
                 <a href="{{ url()->previous() }}"
-                    class="btn btn-outline-info d-flex align-items-center justify-content-center me-3 btn-sm text-light"
+                    class="btn btn-secondary d-flex align-items-center justify-content-center me-3 btn-sm text-light"
                     style="width: 36px; height: 36px;">
                     <i class="fas fa-arrow-left"></i>
                 </a>

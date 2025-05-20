@@ -77,10 +77,10 @@ class MarqueeController extends Controller
         return redirect()->route('runningtext.index')->with('success', 'Teks berhasil diperbarui');
     }
 
-    public function destroy(string $id)
-    {
-        $runningtext = RunningText::findOrFail($id);
-        $runningtext->delete();
+            public function destroy(string $id)
+            {
+                $runningtext = RunningText::findOrFail($id);
+                $runningtext->delete();
 
         return redirect()->route('runningtext.index')->with('success', 'Teks berhasil dihapus');
     }
