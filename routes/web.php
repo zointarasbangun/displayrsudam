@@ -25,7 +25,7 @@ Route::get('/profilrsudam', [DashboardController::class, 'profilrsudam'])->name(
 
 Route::get('/layananunggulan', [DashboardController::class, 'layananunggulan'])->name('layananunggulan');
 
-Route::get('/dokterspesialis', [DashboardController::class, 'dokterspesialis'])->name('dokterspesialis');
+Route::get('/dokterkami', [DashboardController::class, 'dokterkami'])->name('dokterkami');
 
 Route::get('/fasilitasrsudam', [DashboardController::class, 'fasilitasrsudam'])->name('fasilitasrsudam');
 

@@ -49,10 +49,10 @@
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <a href="{{ route('dokterspesialis') }}"
+                    <a href="{{ route('dokterkami') }}"
                         class="menu-button btn btn-info btn-lg w-100 py-4 text-white text-center">
                         <i class="fas fa-user-md fa-2x mb-2 d-block"></i>
-                        <span class="menu-label">Dokter Spesialis </span>
+                        <span class="menu-label">Dokter Kami </span>
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
