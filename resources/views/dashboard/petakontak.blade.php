@@ -3,7 +3,7 @@
 @section('denah')
     <!-- Fasilitas Denah -->
     <section id="denah" class="py-5 position-relative" style="min-height: 100vh;">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
             <h1 class="text-center mb-4">Denah RSUDAM</h1>
             <div class="row">
                 <!-- Denah 1 -->

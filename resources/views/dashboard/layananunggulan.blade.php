@@ -5,7 +5,7 @@
     {{-- Language Switcher --}}
     <!-- <section> begin ============================-->
     <section class="py-5" id="poliklinik">
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-delay="300">
       <div class="row">
       <div class="col-12 py-3">
         <div class="bg-holder bg-size"
@@ -22,7 +22,7 @@
     <!-- ============================================-->
     <!-- <section> begin ============================-->
     <section class="py-0">
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row py-5 align-items-center justify-content-center justify-content-lg-evenly">
       <div class="col-auto col-md-4 col-lg-auto text-xl-start">
         <div class="d-flex flex-column align-items-center">
@@ -106,16 +106,16 @@
 
 @section(section: 'igd24')
   <!-- IGD 24 JAM -->
-  <section class="bg-secondary">
+  <section class="bg-secondary" id="igd">
     <div class="bg-holder"
     style="background-image:url(assets/img/gallery/bg-eye-care.png);background-position:center;background-size:contain;">
-    <div class="mt-4">
+    <div class="mt-4" data-aos="fade-up" data-aos-delay="100">
       <h1 class="text-center text-white"> IGD 24 JAM</h1>
     </div>
 
     </div>
     <!--/.bg-holder-->
-    <div class="container">
+    <div class="container" data-aos="fade-left" data-aos-delay="100">
     <div class="row align-items-center">
       <div class=" text-center mb-4"
       style="position: absolute; top: 5%; left: 50%; transform: translateX(-50%); z-index: 2;">
@@ -150,9 +150,11 @@
 
 @section(section: 'labrad')
   <!-- Laboratorium & Radiologi Modern -->
-  <div class="mt-4">
+  <section id="radiologi">
+    <div class="mt-4" data-aos="fade-up" data-aos-delay="100">
     <h1 class="text-center"> LABORATORIUM DAN RADIOLOGI MODERN</h1>
-  </div>
+    </div>
+  </section>
 
 
 @endsection

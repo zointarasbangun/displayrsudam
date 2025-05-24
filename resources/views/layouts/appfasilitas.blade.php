@@ -40,9 +40,11 @@
             <div class="container d-flex justify-content-between align-items-center">
                 {{-- Tombol Back --}}
                 @if (!in_array(Route::currentRouteName(), ['dashboard']))
-                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm" style="width: 36px; height: 36px;">
-                    <i class="fas fa-arrow-left"></i>
-                </a>
+                    <a href="{{ url()->previous() }}"
+                        class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm"
+                        style="width: 36px; height: 36px;">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 @endif
                 <a class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3"
                     href="#">
@@ -67,7 +69,8 @@
                         </div>
                         <!-- Content hamburger menu -->
                         <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                            <li class="nav-item px-2"><a class="nav-link" href="#disabilitas">Fasilitas Disabilitas</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#disabilitas">Fasilitas Disabilitas</a>
+                            </li>
                             <li class="nav-item px-2"><a class="nav-link" href="#galeri">Galeri</a></li>
                         </ul>
                     </div>
@@ -109,8 +112,7 @@
                                     <path
                                         d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
                                     </path>
-                                </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="#"
-                                    target="_blank">SIMRSUDAM </a>
+                                </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="#" target="_blank">SIMRSUDAM </a>
                             </p>
                         </div>
                     </div>
@@ -125,7 +127,20 @@
         </section>
 
     </main>
-    
+    <!-- aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS Initialization -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 120
+            });
+        });
+    </script>
     <script src="{{ asset('live/vendors/@popperjs/popper.min.js') }}"></script>
     <script src="{{ asset('live/vendors/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('live/vendors/is/is.min.js') }}"></script>
@@ -139,6 +154,30 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&amp;display=swap"
         rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                // Global settings:
+                disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+                initClassName: 'aos-init', // class applied after initialization
+                animatedClassName: 'aos-animate', // class applied on animation
+                useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+                disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+                debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+                throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+                // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                offset: 120, // offset (in px) from the original trigger point
+                delay: 0, // values from 0 to 3000, with step 50ms
+                duration: 400, // values from 0 to 3000, with step 50ms
+                easing: 'ease', // default easing for AOS animations
+                once: false, // whether animation should happen only once - while scrolling down
+                mirror: false, // whether elements should animate out while scrolling past them
+                anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+            });
+        });
+    </script>
 </body>
 
 </html>
