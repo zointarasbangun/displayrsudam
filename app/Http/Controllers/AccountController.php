@@ -43,7 +43,7 @@ class AccountController extends Controller
         $user = User::create($userData);
 
         // Redirect ke halaman dataAkun setelah penyimpanan berhasil
-        return redirect()->route('kelolaakun')->with('success', 'Akun berhasil ditambahkan.');
+        return redirect()->route('superadmin.kelolaakun')->with('success', 'Akun berhasil ditambahkan.');
     }
     public function updateakun(Request $request, $id)
     {
@@ -72,7 +72,7 @@ class AccountController extends Controller
         Session::flash('dataAkunMessage', 'Data akun tidak ada yang diubah.');
         // dd($request->all());
 
-        return redirect()->route('kelolaakun')->with('success', 'Data pengguna diperbarui.');
+        return redirect()->route('superadmin.kelolaakun')->with('success', 'Data pengguna diperbarui.');
     }
 
     public function destroyakun(string $id)
@@ -80,6 +80,6 @@ class AccountController extends Controller
         $data = User::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kelolaakun')->with('success', 'Akun berhasil dihapus.');
+        return redirect()->route('superadmin.kelolaakun')->with('success', 'Akun berhasil dihapus.');
     }
 }

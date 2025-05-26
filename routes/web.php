@@ -56,6 +56,14 @@ Route::group(['middleware' => ['auth', 'superadmin'], 'as' => 'superadmin.', 'pr
     Route::post('/runningtext/store', [MarqueeController::class, 'store'])->name('runningtext.store');
     Route::post('/runningtext/update/{id}', [MarqueeController::class, 'update'])->name('runningtext.update');
     Route::delete('/runningtext/delete/{id}', [MarqueeController::class, 'destroy'])->name('runningtext.delete');
+
+    Route::get('/dokter', [DokterController::class, 'index'])->name('dokter.index');
+    Route::post('/dokter/create', [DokterController::class, 'store'])->name('dokter.store');
+    Route::post('/dokter/update/{id}', [DokterController::class, 'update'])->name('dokter.update');
+    Route::get('/dokter/{id}', [DokterController::class, 'show'])->name('dokter.show'); // untuk fetch 1 data dokter
+    Route::delete('/dokter/{id}', [DokterController::class, 'destroy'])->name('dokter.destroy');
+
+
 });
 
 Route::group(['middleware' => ['auth', 'admin']], function () {

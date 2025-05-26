@@ -251,6 +251,86 @@
     </footer>
     <!-- ./wrapper -->
 
+    @push('styles')
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            .card {
+                border-radius: 10px;
+                border: none;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            }
+
+            .card-header {
+                border-radius: 10px 10px 0 0 !important;
+            }
+
+            .table th {
+                border-top: none;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                letter-spacing: 0.5px;
+            }
+
+            .table td {
+                vertical-align: middle;
+            }
+
+            .badge {
+                padding: 0.35em 0.65em;
+                font-size: 0.75em;
+                font-weight: 600;
+            }
+
+            .btn-group .btn {
+                border-radius: 5px !important;
+                margin-right: 5px;
+            }
+
+            #dokterTable_filter input {
+                border-radius: 20px;
+                padding: 5px 15px;
+                border: 1px solid #ddd;
+            }
+
+            .pagination .page-item.active .page-link {
+                background-color: #0d6efd;
+                border-color: #0d6efd;
+            }
+        </style>
+    @endpush
+
+    @push('scripts')
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#dokterTable').DataTable({
+                    language: {
+                        search: "_INPUT_",
+                        searchPlaceholder: "Cari dokter...",
+                        paginate: {
+                            previous: "<i class='fas fa-chevron-left'></i>",
+                            next: "<i class='fas fa-chevron-right'></i>"
+                        }
+                    },
+                    dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                    responsive: true
+                });
+
+                // Enable tooltips
+                $('[data-bs-toggle="tooltip"]').tooltip();
+            });
+        </script>
+    @endpush
+
+    <!-- Load Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="{{ asset('js/admintable.js') }}"></script>
     <!-- jQuery -->
     <script src="{{ asset('lte/plugins/jquery/jquery.min.js') }}"></script>
@@ -307,23 +387,7 @@
     <script src="{{ asset('lte/dist/js/pages/dashboard.js') }}"></script>
 
 
-    <script src="{{ asset('/sw.js') }}"></script>
-    <script>
-        if ("serviceWorker" in navigator) {
-            // Register a service worker hosted at the root of the
-            // site using the default scope.
-            navigator.serviceWorker.register("/sw.js").then(
-                (registration) => {
-                    console.log("Service worker registration succeeded:", registration);
-                },
-                (error) => {
-                    console.error(`Service worker registration failed: ${error}`);
-                },
-            );
-        } else {
-            console.error("Service workers are not supported.");
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         @if (Session::has('success'))
@@ -359,74 +423,3 @@
 </body>
 
 </html>
-
-
-
-{{-- <body id="body-pd">
-    <div id="app" >
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-{{ config('app.name', 'Laravel') }}
-</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-    <span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <!-- Left Side Of Navbar -->
-    <ul class="navbar-nav me-auto">
-
-    </ul>
-
-    <!-- Right Side Of Navbar -->
-    <ul class="navbar-nav ms-auto">
-        <!-- Authentication Links -->
-        @guest
-        @if (Route::has('login'))
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-        </li>
-        @endif
-
-        @if (Route::has('register'))
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-        </li>
-        @endif
-        @else
-        <li class="nav-item dropdown">
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->name }}
-            </a>
-
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
-        </li>
-        @include('layouts.navigation')
-        @endguest
-    </ul>
-</div>
-</div>
-</nav>
-
-<main class="py-4">
-    @yield('content')
-</main>
-</div>
-
-<script src="js/main.js"></script>
-@yield('scripts')
-</body>
-
-</html> --}}

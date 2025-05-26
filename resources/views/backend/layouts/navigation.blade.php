@@ -35,7 +35,7 @@
                     <li id="menu-l" class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="iconify nav-icon" data-icon="line-md:person-search"></i>
-                            <p>Dokter Spesialis</p>
+                            <p>Dokter Kami</p>
                         </a>
                     </li>
 
@@ -97,9 +97,9 @@
                         </li>
 
                         <li id="menu-l" class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href= "{{ route('superadmin.dokter.index') }}" class="nav-link">
                                 <i class="iconify nav-icon" data-icon="line-md:person-search"></i>
-                                <p>Dokter Spesialis</p>
+                                <p>Dokter Kami</p>
                             </a>
                         </li>
 
