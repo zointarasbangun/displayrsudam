@@ -16,50 +16,50 @@
                 </div>
                 <div class="col-md-7 col-xxl-6 text-center text-md-start">
                     <div data-aos="fade-up" data-aos-delay="200">
-                    <h2 class="fw-bold font-semibold text-gray-800 mb-6">Profil Rumah Sakit<br> </h2>
+                        <h2 class="fw-bold font-semibold text-gray-800 mb-6">Profil Rumah Sakit<br> </h2>
                         <p class="text-lg text-gray-600 mb-4 text-justify">RSUD Dr.H.Abdul Moeloek sebagai Rumah Sakit Kelas
                             A dan
-                        merupakan rumah sakit rujukan tertinggi di Provinsi Lampung yang sudah terakreditasi
-                        PARIPURNA
-                        RSUD Dr.H.Abdul Moeloek Selalu berupaya memenuhi kebutuhan pelayanan kesehatan masyarakat
-                        yang
-                        berkualitas, kebutuhan sarana dan prasarana saat ini sudah semua kita penuhi dan sudah
-                        memenuhi
-                        syarat Kelas A begitu juga dengan tenaga kesehatan dilingkungan RSUDAM.
-                        Semoga laporan Profil ini bermanfaat bagi semua pihak terutama RSUD Dr.H.Abdul Moeloek
-                        Provinsi
-                        Lampung.</p>
-                    <!-- <div class="py-3"><a class="btn btn-lg btn-light rounded-pill" href="#!" role="button">Learn more </a> -->
+                            merupakan rumah sakit rujukan tertinggi di Provinsi Lampung yang sudah terakreditasi
+                            PARIPURNA
+                            RSUD Dr.H.Abdul Moeloek Selalu berupaya memenuhi kebutuhan pelayanan kesehatan masyarakat
+                            yang
+                            berkualitas, kebutuhan sarana dan prasarana saat ini sudah semua kita penuhi dan sudah
+                            memenuhi
+                            syarat Kelas A begitu juga dengan tenaga kesehatan dilingkungan RSUDAM.
+                            Semoga laporan Profil ini bermanfaat bagi semua pihak terutama RSUD Dr.H.Abdul Moeloek
+                            Provinsi
+                            Lampung.</p>
+                        <!-- <div class="py-3"><a class="btn btn-lg btn-light rounded-pill" href="#!" role="button">Learn more </a> -->
                     </div>
 
                 </div>
-                </div>
             </div>
         </div>
+        </div>
         <!-- <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Profil Rumah Sakit</h2>
-                <div class="col-md-5 col-xxl-6"><img class="img-fluid rounded" src="{{ asset('assets/img/tes1.png')}}" alt="..." />
-                </div>
-                <img src="{{ asset('assets/img/tes1.png')}}" class="img-fluid mb-3 rounded-3" alt="Ilustrasi Rumah Sakit"
-                    class="w-full max-w-md mx-auto mb-6">
-                <div class="max-w-3xl mx-auto px-3 py-4">
-                    <p class="text-lg text-gray-600 mb-4 text-justify">RSUD Dr.H.Abdul Moeloek sebagai Rumah Sakit Kelas A dan
-                        merupakan rumah sakit rujukan tertinggi di Provinsi Lampung yang sudah terakreditasi
-                        PARIPURNA
-                        RSUD Dr.H.Abdul Moeloek Selalu berupaya memenuhi kebutuhan pelayanan kesehatan masyarakat
-                        yang
-                        berkualitas, kebutuhan sarana dan prasarana saat ini sudah semua kita penuhi dan sudah
-                        memenuhi
-                        syarat Kelas A begitu juga dengan tenaga kesehatan dilingkungan RSUDAM.
-                        Semoga laporan Profil ini bermanfaat bagi semua pihak terutama RSUD Dr.H.Abdul Moeloek
-                        Provinsi
-                        Lampung.</p>
-                    <h2 class="text-3xl font-semibold text-gray-800 mb-6">Struktur Rumah Sakit</h2>
+                            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Profil Rumah Sakit</h2>
+                            <div class="col-md-5 col-xxl-6"><img class="img-fluid rounded" src="{{ asset('assets/img/tes1.png')}}" alt="..." />
+                            </div>
+                            <img src="{{ asset('assets/img/tes1.png')}}" class="img-fluid mb-3 rounded-3" alt="Ilustrasi Rumah Sakit"
+                                class="w-full max-w-md mx-auto mb-6">
+                            <div class="max-w-3xl mx-auto px-3 py-4">
+                                <p class="text-lg text-gray-600 mb-4 text-justify">RSUD Dr.H.Abdul Moeloek sebagai Rumah Sakit Kelas A dan
+                                    merupakan rumah sakit rujukan tertinggi di Provinsi Lampung yang sudah terakreditasi
+                                    PARIPURNA
+                                    RSUD Dr.H.Abdul Moeloek Selalu berupaya memenuhi kebutuhan pelayanan kesehatan masyarakat
+                                    yang
+                                    berkualitas, kebutuhan sarana dan prasarana saat ini sudah semua kita penuhi dan sudah
+                                    memenuhi
+                                    syarat Kelas A begitu juga dengan tenaga kesehatan dilingkungan RSUDAM.
+                                    Semoga laporan Profil ini bermanfaat bagi semua pihak terutama RSUD Dr.H.Abdul Moeloek
+                                    Provinsi
+                                    Lampung.</p>
+                                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Struktur Rumah Sakit</h2>
 
-                </div>
-                <img src="{{ asset('assets/img/bagan.png')}}" class="img-fluid mb-3 rounded-3" alt="Ilustrasi Rumah Sakit"
-                    class="w-full max-w-md mx-auto mb-6">
-            </div> -->
+                            </div>
+                            <img src="{{ asset('assets/img/bagan.png')}}" class="img-fluid mb-3 rounded-3" alt="Ilustrasi Rumah Sakit"
+                                class="w-full max-w-md mx-auto mb-6">
+                        </div> -->
     </section>
 
 
@@ -84,14 +84,14 @@
     <section id="visi-misi" class="py-16 px-6 md:px-20">
         <div class="container mx-auto text-center">
             <div data-aos="fade-up" data-aos-delay="100">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Visi & Misi</h2>
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Visi & Misi</h2>
                 <p class="text-lg text-gray-600 mb-4 text-justify">Visi: Menjadi rumah sakit terkemuka dalam pelayanan
                     kesehatan
-                berkualitas di seluruh dunia.</p>
+                    berkualitas di seluruh dunia.</p>
                 <p class="text-lg text-gray-600 mb-4 text-justify">Misi: Memberikan pelayanan kesehatan yang profesional,
                     ramah,
-                dan
-                terjangkau.</p>
+                    dan
+                    terjangkau.</p>
             </div>
         </div>
     </section>
@@ -110,12 +110,13 @@
                     class="fas fa-star me-2"></i><i class="fas fa-star-half-alt me-2"></i><i class="far fa-star"></i>
                 <p class="text-lg text-gray-600 mb-4 text-justify">This medical and health care facility distinguishes
                     itself
-                from the competition by providing
-                technologically advanced medical and health care. A mobile app and a website are available via which you
-                can easily schedule appointments, get online consultations, and see physicians, who will assist you
-                through the whole procedure. And all of the prescriptions, medications, and other services they offer
-                are 100% genuine, medically verified, and proved. I believe that the Livedoc staff is doing an
-                outstanding job. Highly recommended their health care services.</p>
+                    from the competition by providing
+                    technologically advanced medical and health care. A mobile app and a website are available via which you
+                    can easily schedule appointments, get online consultations, and see physicians, who will assist you
+                    through the whole procedure. And all of the prescriptions, medications, and other services they offer
+                    are 100% genuine, medically verified, and proved. I believe that the Livedoc staff is doing an
+                    outstanding job. Highly recommended their health care services.</p>
+            </div>
         </div>
         </div>
         </div>

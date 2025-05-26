@@ -44,8 +44,8 @@
                     <a href="{{ url()->previous() }}"
                         class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm"
                         style="width: 36px; height: 36px;">
-                    <i class="fas fa-arrow-left"></i>
-                </a>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 @endif
                 <a class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3"
                     href="#">
