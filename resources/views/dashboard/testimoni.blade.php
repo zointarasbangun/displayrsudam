@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- Debug Section --}}
+    {{-- Error Message --}}
     @if (isset($error))
         <div class="container mt-2 mb-4">
             <div class="alert alert-danger">
@@ -12,7 +12,7 @@
     @endif
 
     <div class="container py-5">
-        <!-- Header Section -->
+        {{-- Section Header --}}
         <div class="row mb-5">
             <div class="col-lg-8 mx-auto text-center">
                 <h2 class="fw-bold">Testimoni Pengunjung</h2>
@@ -20,45 +20,53 @@
             </div>
         </div>
 
-        <!-- Testimonial List -->
+        {{-- Testimonial List --}}
         <div class="row g-4">
             @forelse($testimonials as $testimonial)
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm border-0">
-                        <!-- Media Content (Video atau Gambar) -->
-                        @if (isset($testimonial->media_type) && $testimonial->media_type == 'video')
-                            <div class="ratio ratio-16x9">
-                                <iframe
-                                    src="{{ str_contains($testimonial->video_url, 'watch?v=')
-                                        ? 'https://www.youtube.com/embed/' . \Illuminate\Support\Str::after($testimonial->video_url, 'v=')
-                                        : $testimonial->video_url }}"
-                                    title="Testimoni Video" allowfullscreen>
-                                </iframe>
-                            </div>
-                        @elseif(isset($testimonial->media_type) && $testimonial->media_type == 'image')
-                            <img src="{{ asset($testimonial->image) }}" class="card-img-top" alt="Testimoni Image"
-                                style="height: 500px; object-fit: cover;">
-                        @endif
+                        
+                        {{-- Media Content (Video atau Gambar) --}}
+                        <div class="media-wrapper">
+                            @if (isset($testimonial->media_type) && $testimonial->media_type == 'video')
+                                <div class="ratio-16x9">
+                                    <iframe
+                                        src="{{ str_contains($testimonial->video_url, 'watch?v=') 
+                                            ? 'https://www.youtube.com/embed/' . \Illuminate\Support\Str::after($testimonial->video_url, 'v=') 
+                                            : $testimonial->video_url }}"
+                                        title="Testimoni Video"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            @elseif (isset($testimonial->media_type) && $testimonial->media_type == 'image')
+                                <div class="image-container">
+                                    <img src="{{ asset($testimonial->image) }}" alt="Testimoni Image">
+                                </div>
+                            @endif
+                        </div>
 
                         <div class="card-body">
+                            {{-- Optional Stars --}}
                             <div class="mb-2">
                                 <span class="text-warning"></span>
                                 <span class="text-warning"></span>
                                 <span class="text-warning"></span>
                             </div>
 
-                            <!-- Testimonial Message -->
+                            {{-- Testimonial Message --}}
                             <p class="card-text mb-4">{{ $testimonial->message }}</p>
 
-                            <!-- User Info -->
+                            {{-- User Info --}}
                             <div class="d-flex align-items-center">
                                 @if (isset($testimonial->photo) && $testimonial->photo)
-                                    <img src="{{ asset('storage/' . $testimonial->photo) }}" alt="{{ $testimonial->name }}"
-                                        class="rounded-circle me-3" width="60" height="60"
-                                        style="object-fit: cover;">
+                                    <img src="{{ asset('storage/' . $testimonial->photo) }}" 
+                                         alt="{{ $testimonial->name }}"
+                                         class="rounded-circle me-3"
+                                         width="60" height="60"
+                                         style="object-fit: cover;">
                                 @else
                                     <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3"
-                                        style="width: 60px; height: 60px;">
+                                         style="width: 60px; height: 60px;">
                                         <span class="fs-4">{{ substr($testimonial->name, 0, 1) }}</span>
                                     </div>
                                 @endif
@@ -91,7 +99,7 @@
             @endforelse
         </div>
 
-        <!-- Pagination -->
+        {{-- Pagination --}}
         @if (method_exists($testimonials, 'links'))
             <div class="mt-5 d-flex justify-content-center">
                 {{ $testimonials->links() }}
@@ -99,6 +107,7 @@
         @endif
     </div>
 
+    {{-- Styling --}}
     <style>
         .card {
             transition: all 0.3s ease;
@@ -111,12 +120,30 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
         }
 
-        /* Video container styles */
+        .media-wrapper {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .ratio-16x9 {
             position: relative;
             width: 100%;
-            padding-top: 56.25%;
-            /* 16:9 Aspect Ratio */
+            height: 100%;
+            padding: 0;
         }
 
         .ratio-16x9 iframe {
