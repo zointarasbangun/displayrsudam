@@ -2,7 +2,7 @@
 
 @section('pendaftaran')
     <section class="py-5" id="pendaftaranqr">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="400">
             <!-- Title -->
             <div class="row mb-5">
                 <div class="col-12">

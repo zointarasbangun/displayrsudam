@@ -24,10 +24,10 @@ class DashboardController extends Controller
         return view('dashboard.layananunggulan');
     }
 
-    public function dokterspesialis()
+    public function dokterkami()
     {
         // $dokters = Dokter::all();
-        return view('dashboard.dokter');
+        return view('dashboard.dokterkami');
     }
 
     public function fasilitasrsudam()

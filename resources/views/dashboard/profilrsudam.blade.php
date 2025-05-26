@@ -11,12 +11,14 @@
                 <div class=" text-center mb-4">
                     <!-- <h1 class="text-center"> Profil Rumah Sakit</h1> -->
                 </div>
-                <div class="col-md-5 col-xxl-6"><img class="img-fluid rounded"  src="{{ asset('assets/img/tes1.png')}}"
-                        alt="..." />
+                <div class="col-md-5 col-xxl-6" data-aos="fade-right" data-aos-delay="100"><img class="img-fluid rounded"
+                        src="{{ asset('assets/img/tes1.png')}}" alt="..." />
                 </div>
                 <div class="col-md-7 col-xxl-6 text-center text-md-start">
+                    <div data-aos="fade-up" data-aos-delay="200">
                     <h2 class="fw-bold font-semibold text-gray-800 mb-6">Profil Rumah Sakit<br> </h2>
-                    <p class="text-lg text-gray-600 mb-4 text-justify">RSUD Dr.H.Abdul Moeloek sebagai Rumah Sakit Kelas A dan
+                        <p class="text-lg text-gray-600 mb-4 text-justify">RSUD Dr.H.Abdul Moeloek sebagai Rumah Sakit Kelas
+                            A dan
                         merupakan rumah sakit rujukan tertinggi di Provinsi Lampung yang sudah terakreditasi
                         PARIPURNA
                         RSUD Dr.H.Abdul Moeloek Selalu berupaya memenuhi kebutuhan pelayanan kesehatan masyarakat
@@ -29,6 +31,8 @@
                         Lampung.</p>
                     <!-- <div class="py-3"><a class="btn btn-lg btn-light rounded-pill" href="#!" role="button">Learn more </a> -->
                     </div>
+
+                </div>
                 </div>
             </div>
         </div>
@@ -66,7 +70,7 @@
 @section('sejarah')
     <!-- SEJARAH -->
     <section id="sejarah" class="bg-blue-50 py-16 px-6 md:px-20">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6">Sejarah Rumah Sakit</h2>
             <p class="text-lg text-gray-600 mb-4 text-justify">Rumah Sakit Sehat didirikan pada tahun 2000 dengan tujuan
                 untuk
@@ -79,12 +83,16 @@
     <!-- VISI & MISI -->
     <section id="visi-misi" class="py-16 px-6 md:px-20">
         <div class="container mx-auto text-center">
+            <div data-aos="fade-up" data-aos-delay="100">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6">Visi & Misi</h2>
-            <p class="text-lg text-gray-600 mb-4 text-justify">Visi: Menjadi rumah sakit terkemuka dalam pelayanan kesehatan
+                <p class="text-lg text-gray-600 mb-4 text-justify">Visi: Menjadi rumah sakit terkemuka dalam pelayanan
+                    kesehatan
                 berkualitas di seluruh dunia.</p>
-            <p class="text-lg text-gray-600 mb-4 text-justify">Misi: Memberikan pelayanan kesehatan yang profesional, ramah,
+                <p class="text-lg text-gray-600 mb-4 text-justify">Misi: Memberikan pelayanan kesehatan yang profesional,
+                    ramah,
                 dan
                 terjangkau.</p>
+            </div>
         </div>
     </section>
 @endsection
@@ -93,15 +101,15 @@
 @section('penghargaan')
     <!-- PENGHARGAAN -->
     <section id="penghargaan" class="bg-blue-50 py-16 px-6 md:px-20">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6">Penghargaan & Prestasi</h2>
         </div>
-        <div class="col-sm-9 text-center text-sm-start pt-3 pt-sm-0">
+        <div class="col-sm-9 text-center text-sm-start pt-3 pt-sm-0" data-aos="fade-up" data-aos-delay="100">
             <h2>Ini Penghargaan</h2>
-            <div class="my-2"><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i
+            <div class="my-2" data-aos="fade-up" data-aos-delay="100" ><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i
                     class="fas fa-star me-2"></i><i class="fas fa-star-half-alt me-2"></i><i class="far fa-star"></i>
-            </div>
-            <p class="text-lg text-gray-600 mb-4 text-justify">This medical and health care facility distinguishes itself
+                <p class="text-lg text-gray-600 mb-4 text-justify">This medical and health care facility distinguishes
+                    itself
                 from the competition by providing
                 technologically advanced medical and health care. A mobile app and a website are available via which you
                 can easily schedule appointments, get online consultations, and see physicians, who will assist you
@@ -117,12 +125,12 @@
 @section('virtual')
     <!-- VIRTUAL TOUR -->
     <section id="virtual-tour" class="py-16 px-6 md:px-20">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6">Virtual Tour</h2>
             <p class="text-lg text-gray-600 mb-4 text-justify">Jelajahi rumah sakit kami secara virtual melalui tur 3D yang
                 interaktif.</p>
             <!-- Contoh video atau gambar virtual tour -->
-            <div class="max-w-lg mx-auto">
+            <div class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="200">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/YOuJfiYXx1Q" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>

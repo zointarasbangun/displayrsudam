@@ -66,11 +66,21 @@
                             </h4>
                         </div>
                         <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+<<<<<<< HEAD
                             <li class="nav-item px-2"><a class="nav-link" href="#poliklinik">Poliklinik</a></li>
                             <li class="nav-item px-2"><a class="nav-link" href="#igd24">IGD 24 Jam</a></li>
                             <li class="nav-item px-2"><a class="nav-link" href="#labrad">Laboratorium & Radiologi</a></li>
                         </ul>
 
+=======
+                            <li class="nav-item px-2"><a class="nav-link" href="#poliklinik">Poliklink</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#igd">IGD</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#radiologi">Radiologi</a></li>
+                            <!-- <li class="nav-item px-2"><a class="nav-link" href="#penghargaan">Penghargaan </a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#virtual-tour">Virtual Tour </a></li> -->
+
+                        </ul>
+>>>>>>> 4aad595b4dd7f3cc441077a18b762f98108df982
                     </div>
                 </div>
 

@@ -25,7 +25,7 @@ Route::get('/profilrsudam', [DashboardController::class, 'profilrsudam'])->name(
 
 Route::get('/layananunggulan', [DashboardController::class, 'layananunggulan'])->name('layananunggulan');
 
-Route::get('/dokterspesialis', [DashboardController::class, 'dokterspesialis'])->name('dokterspesialis');
+Route::get('/dokterkami', [DashboardController::class, 'dokterkami'])->name('dokterkami');
 
 Route::get('/fasilitasrsudam', [DashboardController::class, 'fasilitasrsudam'])->name('fasilitasrsudam');
 
@@ -41,23 +41,24 @@ Route::get('/infodarurat', [DashboardController::class, 'infodarurat'])->name('i
 
 Route::get('/dokter', [DokterController::class, 'dokter']);
 
-Route::group(['middleware' => ['auth']], function () {
-    Route::group(['middleware' => ['superadmin']], function () {
+Route::group(['middleware' => ['auth', 'superadmin'], 'as' => 'superadmin.', 'prefix' => 'superadmin'], function () {
+    Route::get('/pengguna', [AccountController::class, 'kelolaakun'])->name('kelolaakun');
+    Route::post('/pengguna/store', [AccountController::class, 'storeakun'])->name('pengguna.store');
+    Route::post('/pengguna/update/{id}', [AccountController::class, 'updateakun'])->name('pengguna.update');
+    Route::delete('/pengguna/delete/{id}', [AccountController::class, 'destroyakun'])->name('pengguna.delete');
+
         Route::get('/pengguna', [AccountController::class, 'kelolaakun'])->name('kelolaakun');
         Route::post('/pengguna/store', [AccountController::class, 'storeakun'])->name('pengguna.store');
-        Route::post('/pengguna/update{id}', [AccountController::class, 'updateakun'])->name('pengguna.update');
-        Route::delete('/pengguna/delete{id}', [AccountController::class, 'destroyakun'])->name('pengguna.delete');
+    Route::post('/pengguna/update/{id}', [AccountController::class, 'updateakun'])->name('pengguna.update');
+    Route::delete('/pengguna/delete/{id}', [AccountController::class, 'destroyakun'])->name('pengguna.delete');
 
         Route::get('/runningtext', [MarqueeController::class, 'runningtext'])->name('runningtext.index');
         Route::post('/runningtext/store', [MarqueeController::class, 'store'])->name('runningtext.store');
-        Route::post('/runningtext/update{id}', [MarqueeController::class, 'update'])->name('runningtext.update');
-        Route::delete('/runningtext/delete{id}', [MarqueeController::class, 'destroy'])->name('runningtext.delete');
-
-
+    Route::post('/runningtext/update/{id}', [MarqueeController::class, 'update'])->name('runningtext.update');
+    Route::delete('/runningtext/delete/{id}', [MarqueeController::class, 'destroy'])->name('runningtext.delete');
     });
 
     Route::group(['middleware' => ['admin']], function () {
 
 
     });
-});
