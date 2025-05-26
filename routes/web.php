@@ -5,6 +5,7 @@ use App\Http\Controllers\DokterController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\TestiController;
 use App\http\Controllers\DashboardController;
 use App\http\Controllers\MarqueeController;
 
@@ -47,10 +48,10 @@ Route::group(['middleware' => ['auth', 'superadmin'], 'as' => 'superadmin.', 'pr
     Route::post('/pengguna/update/{id}', [AccountController::class, 'updateakun'])->name('pengguna.update');
     Route::delete('/pengguna/delete/{id}', [AccountController::class, 'destroyakun'])->name('pengguna.delete');
 
-    Route::get('/pengguna', [AccountController::class, 'kelolaakun'])->name('kelolaakun');
-    Route::post('/pengguna/store', [AccountController::class, 'storeakun'])->name('pengguna.store');
-    Route::post('/pengguna/update/{id}', [AccountController::class, 'updateakun'])->name('pengguna.update');
-    Route::delete('/pengguna/delete/{id}', [AccountController::class, 'destroyakun'])->name('pengguna.delete');
+    Route::get('/testimoni', [TestiController::class, 'index'])->name('testimoni.index');
+    Route::post('/testimoni/store', [TestiController::class, 'tambahnama'])->name('testimoni.store');
+    Route::post('/testimoni/update/{id}', [TestiController::class, 'update'])->name('testimoni.update');
+    Route::delete('/testimoni/delete/{id}', [TestiController::class, 'destroy'])->name('testimoni.delete');
 
     Route::get('/runningtext', [MarqueeController::class, 'runningtext'])->name('runningtext.index');
     Route::post('/runningtext/store', [MarqueeController::class, 'store'])->name('runningtext.store');
@@ -66,10 +67,19 @@ Route::group(['middleware' => ['auth', 'superadmin'], 'as' => 'superadmin.', 'pr
 
 });
 
-Route::group(['middleware' => ['auth', 'admin']], function () {
-    Route::get('admin/runningtext', [MarqueeController::class, 'adminrunningtext'])->name('admin.runningtext.index');
-    Route::post('admin/runningtext/store', [MarqueeController::class, 'adminstore'])->name('admin.runningtext.store');
-    Route::post('admin/runningtext/update{id}', [MarqueeController::class, 'adminupdate'])->name('admin.runningtext.update');
-    Route::delete('admin/runningtext/delete{id}', [MarqueeController::class, 'admindestroy'])->name('admin.runningtext.delete');
+Route::group(['middleware' => ['auth', 'admin'], 'as' => 'admin.', 'prefix' => 'admin'], function () {
+    Route::get('/runningtext', [MarqueeController::class, 'runningtext'])->name('runningtext.index');
+    Route::post('/runningtext/store', [MarqueeController::class, 'store'])->name('runningtext.store');
+    Route::post('/runningtext/update/{id}', [MarqueeController::class, 'update'])->name('runningtext.update');
+    Route::delete('/runningtext/delete/{id}', [MarqueeController::class, 'destroy'])->name('runningtext.delete');
 
+    Route::get('/testimoni', [TestiController::class, 'index'])->name('testimoni.index');
+    Route::post('/testimoni/store', [TestiController::class, 'tambahnama'])->name('testimoni.store');
+    Route::post('/testimoni/update/{id}', [TestiController::class, 'update'])->name('testimoni.update');
+    Route::delete('/testimoni/delete/{id}', [TestiController::class, 'destroy'])->name('testimoni.delete');
+
+    Route::get('/runningtext', [MarqueeController::class, 'runningtext'])->name('runningtext.index');
+    Route::post('/runningtext/store', [MarqueeController::class, 'store'])->name('runningtext.store');
+    Route::post('/runningtext/update/{id}', [MarqueeController::class, 'update'])->name('runningtext.update');
+    Route::delete('/runningtext/delete/{id}', [MarqueeController::class, 'destroy'])->name('runningtext.delete');
 });

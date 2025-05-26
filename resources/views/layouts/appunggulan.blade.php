@@ -40,11 +40,9 @@
             <div class="container d-flex justify-content-between align-items-center">
                 {{-- Tombol Back --}}
                 @if (!in_array(Route::currentRouteName(), ['dashboard']))
-                    <a href="{{ url()->previous() }}"
-                        class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm"
-                        style="width: 36px; height: 36px;">
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
+                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary d-flex align-items-center justify-content-center me-3 btn-sm" style="width: 36px; height: 36px;">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
                 @endif
                 <a class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3"
                     href="#">
@@ -67,6 +65,12 @@
                                 Sahabat masyarakat menuju Lampung sehat
                             </h4>
                         </div>
+                        <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                            <li class="nav-item px-2"><a class="nav-link" href="#poliklinik">Poliklinik</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#igd24">IGD 24 Jam</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#labrad">Laboratorium & Radiologi</a></li>
+                        </ul>
+
                     </div>
                 </div>
 
@@ -78,7 +82,7 @@
         <section class="py-5 d-flex align-items-start justify-content-center"
             style="min-height: 100vh; background-image: url('{{ asset('live/assets/img/gallery/hero-bg.png') }}'); background-size: cover; background-position: top center;">
 
-            @yield('content')
+            @yield('poliklinik')
 
         </section>
 

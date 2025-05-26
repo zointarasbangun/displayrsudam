@@ -3,14 +3,14 @@
 @section('kontak')
 <section class="py-5" id="kontakugd">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 text-center">
+        <div class="row justify-content-center" >
+            <div class="col-12 col-md-8 text-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="p-4 rounded-4 shadow-sm position-relative"
                      style="background-image: url('{{ asset('live/assets/img/gallery/bg-departments.png') }}');
                             background-size: cover;
                             background-position: center;
-                            background-repeat: no-repeat;">
-                    <h1 class="text-black fs-4 fs-md-2 m-0">Kontak UGD : 08xxxxxxxxxxx</h1>
+                            background-repeat: no-repeat;" >
+                    <h1 class="text-black fs-4 fs-md-2 m-0" >Kontak UGD : 08xxxxxxxxxxx</h1>
                 </div>
             </div>
         </div>
@@ -20,8 +20,8 @@
 
 @section('prosedur')
 <!-- Section: Prosedur Items -->
-<section class="py-5" id="prosedurugd">
-    <div class="container">
+<section class="py-5" id="prosedurugd" >
+    <div class="container" data-aos="fade-up" data-aos-delay="200">
         <!-- Title -->
         <div class="row mb-5">
             <div class="col-12">
@@ -76,7 +76,7 @@
 
 @section('peta')
 <section class="py-5" id="petaugd">
-    < <div class="container">
+    < <div class="container" data-aos="fade-up" data-aos-delay="200">
         <!-- Title -->
         <div class="row mb-5">
             <div class="col-12">

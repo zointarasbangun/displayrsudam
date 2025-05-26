@@ -24,12 +24,10 @@ class Testimoni extends Model
     protected $fillable = [
         'name',
         'email',
-        'rating',
         'message',
         'media_type',
         'image',
         'video_url',
-        'photo',
     ];
     
     /**
