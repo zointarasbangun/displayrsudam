@@ -3,7 +3,7 @@
 @section('disabilitas')
     <!-- Fasilitas Disabilitas -->
     <section id="disabilitas" class="py-5 position-relative" style="min-height: 100vh;">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
             <h1 class="text-center mb-4">Fasilitas Disabilitas</h1>
             <div class="row">
                 <!-- Contoh Fasilitas Disabilitas 1 -->
@@ -46,7 +46,7 @@
 @section('galeri')
     <!-- Fasilitas Galeri -->
     <section id="galeri" class="py-5 position-relative" style="min-height: 100vh;">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
             <h1 class="text-center mb-4">Galeri Fasilitas</h1>
             <div class="row">
                 <!-- Galeri 1 -->

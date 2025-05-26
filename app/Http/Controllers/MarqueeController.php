@@ -15,39 +15,81 @@ class MarqueeController extends Controller
         return view('backend.marquee.marquee', compact('texts'));
     }
 
-                public function store(Request $request)
-            {
-                $request->validate([
-                    'text' => 'required|string|max:255',
-                    'status' => 'required|boolean'
-                ]);
+    public function adminrunningtext()
+    {
+        $texts = RunningText::all();
+        return view('backend.marquee.marquee', compact('texts'));
+    }
 
-                RunningText::create($request->all());
+    public function store(Request $request)
+    {
+        $request->validate([
+            'text' => 'required|string|max:255',
+            'status' => 'required|boolean'
+        ]);
 
-                return redirect()->route(auth()->user()->role . '.runningtext.index')
-                                ->with('message', 'Teks berhasil ditambahkan');
-            }
+        RunningText::create($request->all());
 
-            public function update(Request $request, $id)
-            {
-                $validatedData = $request->validate([
-                    'text' => 'nullable',
-                    'status' => 'nullable',
-                ]);
+        return redirect()->route('runningtext.index')->with('message', 'Teks berhasil ditambahkan');
+    }
 
-                $runningtext = RunningText::findOrFail($id);
-                $runningtext->update($validatedData);
+    public function adminstore(Request $request)
+    {
+        $request->validate([
+            'text' => 'required|string|max:255',
+            'status' => 'required|boolean'
+        ]);
 
-                return redirect()->route(auth()->user()->role . '.runningtext.index')
-                                ->with('success', 'Teks berhasil diperbarui');
-            }
+        RunningText::create($request->all());
+
+        return redirect()->route('runningtext.index')->with('message', 'Teks berhasil ditambahkan');
+    }
+
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'text' => 'nullable',
+            'status' => 'nullable',
+        ]);
+
+        $runningtext = RunningText::findOrFail($id);
+
+        $runningtext->update($validatedData);
+
+        $runningtext->save();
+
+        return redirect()->route('runningtext.index')->with('success', 'Teks berhasil diperbarui');
+    }
+
+    public function adminupdate(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'text' => 'nullable',
+            'status' => 'nullable',
+        ]);
+
+        $runningtext = RunningText::findOrFail($id);
+
+        $runningtext->update($validatedData);
+
+        $runningtext->save();
+
+        return redirect()->route('runningtext.index')->with('success', 'Teks berhasil diperbarui');
+    }
 
             public function destroy(string $id)
             {
                 $runningtext = RunningText::findOrFail($id);
                 $runningtext->delete();
 
-                return redirect()->route(auth()->user()->role . '.runningtext.index')
-                                ->with('success', 'Teks berhasil dihapus');
-            }
+        return redirect()->route('runningtext.index')->with('success', 'Teks berhasil dihapus');
+    }
+
+    public function admindestroy(string $id)
+    {
+        $runningtext = RunningText::findOrFail($id);
+        $runningtext->delete();
+
+        return redirect()->route('runningtext.index')->with('success', 'Teks berhasil dihapus');
+    }
 }

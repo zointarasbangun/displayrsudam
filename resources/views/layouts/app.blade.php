@@ -122,6 +122,7 @@
 
         </section>
     </main>
+    
     <script src="{{ asset('live/vendors/@popperjs/popper.min.js') }}"></script>
     <script src="{{ asset('live/vendors/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('live/vendors/is/is.min.js') }}"></script>

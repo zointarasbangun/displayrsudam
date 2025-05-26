@@ -63,9 +63,17 @@
             </form>
         </div>
         <div class="d-flex mb-3">
-            <div class="dropdown-divider m-auto w-25"></div>
+            {{-- Tombol Back --}}
+            @if (!in_array(Route::currentRouteName(), ['dashboard']))
+                <a href="{{ url()->previous() }}"
+                    class="btn btn-secondary d-flex align-items-center justify-content-center me-3 btn-sm text-light"
+                    style="width: 36px; height: 36px;">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            @endif
+            <div class="dropdown-divider m-auto w-25" style="background-color: white;"></div>
             <small class="text-nowrap text-white">By RSUDAM</small>
-            <div class="dropdown-divider m-auto w-25"></div>
+            <div class="dropdown-divider m-auto w-25" style="background-color: white;"></div>
         </div>
     </div>
 
