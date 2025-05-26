@@ -57,10 +57,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::group(['middleware' => ['admin']], function () {
-        Route::get('/runningtext', [MarqueeController::class, 'runningtext'])->name('runningtext.index');
-        Route::post('/runningtext/store', [MarqueeController::class, 'store'])->name('runningtext.store');
-        Route::post('/runningtext/update{id}', [MarqueeController::class, 'update'])->name('runningtext.update');
-        Route::delete('/runningtext/delete{id}', [MarqueeController::class, 'destroy'])->name('runningtext.delete');
+
 
     });
 });
