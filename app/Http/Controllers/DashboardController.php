@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\RunningText;
+use App\Models\Spesialis;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -26,8 +27,9 @@ class DashboardController extends Controller
 
     public function dokterkami()
     {
+        $spesialisasis = Spesialis::all();
         // $dokters = Dokter::all();
-        return view('dashboard.dokterkami');
+        return view('dashboard.dokterkami', compact('spesialisasis'));
     }
 
     public function fasilitasrsudam()

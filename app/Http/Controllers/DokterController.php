@@ -97,4 +97,16 @@ class DokterController extends Controller
         return redirect()->route('superadmin.dokter.index')
             ->with('success', 'Dokter berhasil dihapus!');
     }
+
+    public function bySpesialis($id)
+    {
+        // Ambil data spesialisasinya (opsional, untuk title di view)
+        $spesialis = Spesialis::findOrFail($id);
+
+        // Query dokter dengan spesialis_id = $id
+        $dokters = Dokter::where('spesialis_id', $id)
+                         ->get();
+
+        return view('dashboard.dokter', compact('spesialis', 'dokters'));
+    }
 }

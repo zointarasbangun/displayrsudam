@@ -300,11 +300,11 @@
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div class="flex-shrink-0">
+                                                        {{-- <div class="flex-shrink-0">
                                                             <img src="{{ asset('storage/' . $dokter->foto) }}"
                                                                 alt="{{ $dokter->nama_dokter }}" class="rounded-circle"
                                                                 width="40" height="40">
-                                                        </div>
+                                                        </div> --}}
                                                         <div class="flex-grow-1 ms-3">
                                                             <h6 class="mb-0">{{ $dokter->nama_dokter }}</h6>
                                                             <small class="text-muted">{{ $dokter->email }}</small>
