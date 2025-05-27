@@ -6,7 +6,7 @@
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-2xl font-bold text-center mb-4 text-blue-700">Daftar Dokter</h1>
         <!-- Form Pencarian -->
-        <div class="mb-3 flex flex-col md:flex-row items-center gap-4">
+        <div class=" flex flex-col md:flex-row items-center gap-4">
             <input type="text" id="searchNama" placeholder="Cari berdasarkan nama"
                 class="w-full md:w-1/3 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
             <input type="text" id="searchSpesialis" placeholder="Cari spesialis"
@@ -21,13 +21,13 @@
                     <div class="col-md-4 mb-4 text-sm-start">
                         <!-- CARD DOKTER -->
                         <div class="d-flex flex-column align-items-center">
-                            <div class="bg-white rounded rounded-4 shadow-lg p-4 d-flex w-100 align-items-start border border-light-subtle h-100"
+                            <div class="bg-white rounded rounded-4 shadow-lg p-4 d-flex flex-column w-100 align-items-center border border-light-subtle h-100"
                                 style="min-height: 260px; transition: transform 0.3s ease, box-shadow 0.3s ease; max-width: 100%;"
                                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.1)'"
                                 onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.05)'">
 
-                                <!-- Gambar sebagai tombol modal -->
-                                <div class="me-4 flex-shrink-0">
+                                <!-- Gambar sebagai tombol modal - dipindahkan ke atas -->
+                                <div class="mb-3">
                                     <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-toggle="modal"
                                         data-bs-target="#fotoModal{{ $dokter->id }}">
                                         <img src="{{ asset('storage/' . $dokter->foto) }}" alt="{{ $dokter->nama_dokter }}"
@@ -37,8 +37,8 @@
                                 </div>
 
                                 <!-- Informasi Dokter -->
-                                <div class="flex-grow-1 d-flex flex-column">
-                                    <h3 class="fs-5 fw-bold text-primary mb-1" style="word-break: break-word;">
+                                <div class="w-100 d-flex flex-column text-center">
+                                    <h3 class="fw-bold text-primary mb-1" style="word-break: break-word;">
                                         {{ $dokter->nama_dokter }}
                                     </h3>
                                     <p class="text-secondary mb-2">{{ $dokter->spesialis->nama_spesialisasi }}</p>
@@ -51,9 +51,10 @@
                                         @endforelse
                                         <p>📍 RSUD Abdul Moeloek, Lampung</p>
                                     </div>
-                                    <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-auto px-3 py-1">
+                                    {{-- <a href="#"
+                                        class="btn btn-outline-primary btn-sm rounded-pill mt-auto px-3 py-1 mx-auto">
                                         Jadwal Dokter
-                                    </a>
+                                    </a> --}}
                                 </div>
                             </div>
                         </div>
